@@ -765,6 +765,20 @@ function junkItem(x) {
 }
 
 function highlightNextCheck(locationID) {
+  
+  let d = new Date();
+  if ((d.getTime() - ageSetStamp) > 30000) {
+    age = "";
+  }
+  if (adult.includes(locationID)) {
+    age = "adult";
+    ageSetStamp = d.getTime();
+  }
+  else if (child.includes(locationID)) {
+    age = "child";
+    ageSetStamp = d.getTime();
+  }
+
   for(var j = 0; j < AreaIndexes.length; j++) {
 				if(Locations.indexOf(locationID) < AreaIndexes[j])
 					break;
@@ -777,6 +791,10 @@ function highlightNextCheck(locationID) {
     
     if (i == Locations.indexOf(locationID)) {
       i = AreaIndexes[j];
+    }
+    
+    if ((age == "child" && adult.includes(Locations[i])) || (age == "adult" && child.includes(Locations[i]))) {
+      continue;
     }
     
     if (document.getElementById(Locations[i]).style.display != "none" && document.getElementById(Locations[i]).style.visibility != "hidden" && document.getElementById(Locations[i]).value == "" && Location_Peek[Locations[i]]) {

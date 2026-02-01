@@ -66,6 +66,8 @@ var chusInBigChests = false;
 var songItemChecked = true;
 var unusedLocations = [];
 var dimmed = 0.25;
+var age = "";
+var ageSetStamp = 0;
 
 var dungeonToEntrance_ER_dict = {}; // given a dungeon, tell which entrance you enter to get to it
 var entranceToDungeon_ER_dict = {}; // given a dugeon entrance, tell which dungeon it leads to
@@ -936,7 +938,52 @@ var tempTime = 0;
 var tempHours = 0;
 var tempMinutes = 0;
 var tempSeconds = 0;
-	
+
+//Lists of adult and child-onlyish checks to be used for next check highlighting. It's more of a 'you're very likely to be doing this as child/adult' than a guarantee
+var adult = [
+  "gerudo_hammer",
+  "hylia_adult_fishing", "hylia_lab_top", "hylia_lab_dive", "hylia_sun_shoot",
+  "poes",
+  "g_fairy",
+  "lacs",
+  "ice_glacier_hp", "ice_bottom_of_fountain",
+  "gs_ice_spinning_scythe", "ice_map", "gs_ice_hp_room", "ice_hp", "ice_compass", "gs_ice_block_room", "ice_irons",
+  "goron_link",
+  "gs_dodongos_east_side", "gs_dodongos_scarecrow", "scrub_dodongos_1", "scrub_dodongos_2", "dodongos_map", "dodongos_compass", "gs_dodongos_above_stairs", "gs_dodongos_stair_vines", "dodongos_bomb_flower_platform", "scrub_dodongos_3", "scrub_dodongos_4", "dodongos_bomb_bag", "dodongos_end_of_bridge", "gs_dodongos_before_king", "dodongos_above_king", "dodongos_king_dodongo", "h_dodongos",
+	"trail_fairy",
+  "crater_bean", "scrub_crater_1", "scrub_crater_2", "scrub_crater_3", "crater_hammer_fairy", "crater_nook_hp", "crater_grotto", "h_crater_grotto", "h_crater_wall",
+  "anju", "archery_game",
+  "race_1", "race_2",
+  "thaw_king",
+  "gerudo_archery_1", "gerudo_archery_2",
+  "forest_first", "gs_forest_first", "gs_forest_lobby", "forest_stalfos", "forest_midCourtyard", "gs_forest_outdoor_east", "forest_highCourtyard", "forest_lowCourtyard", "forest_blockRoom", "forest_bossKey", "forest_floormaster", "gs_forest_outdoor_west", "forest_red", "forest_bow", "forest_blue", "forest_fallingCeiling", "forest_nearBoss", "gs_forest_basement", "forest_phantomGanon",
+  "fire_nearBoss", "gs_fire_basement", "fire_hammer1", "fire_hammer2", "fire_lavaOpen", "gs_fire_time", "fire_lavaBomb", "fire_volvagia", "fire_lowerMaze", "gs_fire_bomb_wall", "fire_sideRoom", "fire_map", "fire_upperMaze", "fire_shortcut", "gs_fire_scarecrow_1", "gs_fire_scarecrow_2", "fire_scarecrow", "fire_compass", "fire_sotGoron", "fire_top",
+  "spirit_adultLeft", "gs_spirit_boulder_room", "spirit_adultRight", "spirit_rotatingMirror1", "spirit_rotatingMirror2", "spirit_lullabyHand", "spirit_lullabyHigh", "gs_spirit_lobby", "spirit_nearFourArmos", "spirit_invisible1", "spirit_invisible2", "spirit_leftHand", "spirit_bossKey", "spirit_tippyTop", "spirit_twinrova",
+  "shadow_map", "shadow_hovers", "shadow_compass", "shadow_earlySilvers", "gs_shadow_like_like", "shadow_spinning1", "shadow_spinning2", "shadow_spikesLower", "gs_shadow_crusher", "shadow_spikesUpper", "shadow_spikesSwitch", "shadow_redeadSilvers", "gs_shadow_giant_pot", "shadow_pot", "shadow_wind", "shadow_bombable", "shadow_gibdos", "gs_shadow_near_boat", "shadow_dins1", "shadow_dins2", "gs_shadow_three_pots", "shadow_floormaster", "shadow_bongo",
+  "water_compass", "water_map", "water_cracked", "water_torches", "gs_water_near_boss_key", "water_bossKey", "gs_water_south_basement", "water_block", "gs_water_central", "water_pillar", "gs_water_platform_room", "water_dLink", "gs_water_river", "water_river", "water_dragon", "water_morpha",
+  "scrub_ganons_1", "scrub_ganons_2", "scrub_ganons_3", "scrub_ganons_4", "ganons_lightTrial1", "ganons_lightTrial2", "ganons_lightTrial3", "ganons_lightTrial4", "ganons_lightTrial5", "ganons_lightTrial6", "ganons_lightTrial7", "ganons_lightTrialLullaby", "ganons_spiritTrial1", "ganons_spiritTrial2", "ganons_forestTrial", "ganons_waterTrial1", "ganons_waterTrial2", "ganons_shadowTrial1", "ganons_shadowTrial2", "ganons_bossKey",
+  "gtg_lobbyLeft", "gtg_lobbyRight", "gtg_stalfos", "gtg_wolfos", "gtg_silvers1", "gtg_silvers2", "gtg_silvers3", "gtg_silvers4", "gtg_eyes", "gtg_aboveEyes", "gtg_keese", "gtg_flamesChest", "gtg_freestanding", "gtg_right2", "gtg_right3", "gtg_beamos", "gtg_left1",  "gtg_left2", "gtg_left3", "gtg_left4", "gtg_final", "gtg_toilet",
+  "stormsSpot", "boleroSpot", "minuetSpot", "serenadeSpot", "preludeSpot", "nocturneSpot",
+];
+var child = [
+  "kokiri_sword",
+  "talons_chickens", "back_of_ranch",
+  "hylia_child_fishing", "hylia_bottle",
+  "market_slingshot_game", "richard", "market_bowling_1", "market_bowling_2", "market_lens_game",
+  "dins_fairy",
+  "target", "ocarina_game", "skull_kid", "bridge_scrub", "theater_skull",
+  "rolling_goron", "goron_dance", "goron_pot",
+  "gs_crater_soil", "gs_crater_crate", "scrub_crater_child",
+  "anjus_chickens",
+  "gravedigging_tour",
+  "frogs_1",
+  "zora_torches", "zora_diving",
+  "gs_jabu_vines", "scrub_jabu", "jabu_map", "jabu_compass", "jabu_boomerang", "gs_jabu_near_octo_1", "gs_jabu_near_octo_2", "gs_jabu_near_boss", "jabu_barinade",
+  "spirit_childLeft", "spirit_childRight",
+  "well_fakeLeft", "well_frontBombable", "well_centerBig", "well_fakeRight", "well_centerSmall", "well_backBombable", "well_waterLeft", "well_coffin", "well_waterFront", "well_invisible", "well_deadHand", "gs_well_west_inner", "gs_well_east_inner", "well_locked1", "well_locked2", "gs_well_like_like", "well_basement",
+  "zeldasSpot", "eponasSpot", "sariasSpot", "oot",
+];
+  
 var Locations = [
 	"mido_1", "mido_2", "mido_3", "mido_4", "kokiri_sword", "shop_kokiri_TL", "shop_kokiri_TR", "shop_kokiri_BR", "shop_kokiri_BL", "gs_kokiri_child", "gs_kokiri_soil", "gs_kokiri_adult", "kokiri_storms", "cow_kokiri", "h_deku_left", "h_deku_right", "h_near_lw", "h_kokiri_storms",
 	"talons_chickens", "gs_lon_lon_tree", "back_of_ranch", "scrub_ranch_1", "scrub_ranch_2", "scrub_ranch_3", "gs_lon_lon_window", "gs_lon_lon_shed", "gs_lon_lon_back_wall","cow_ranch1", "cow_ranch2", "cow_ranch3", "cow_ranch4", 
