@@ -384,6 +384,60 @@ function stoneMedallionInput() {
 	Logic.generic1 = Logic.dung7;
 	Logic.generic2 = Logic.dung8;
 	Logic.generic3 = Logic.dung9;		
+  
+  updateChecklistRewards();
+}
+
+function dungeonHeaderVisibility() {
+  let visibleChecks = [];
+  for (var i = 0; i < Locations.length; i++) {
+    if (document.getElementById(Locations[i]).style.visibility == "visible" && document.getElementById(Locations[i]).style.display != "none") {
+      visibleChecks.push(Locations[i]);
+    }
+  }
+  const elements = document.querySelectorAll('[data-dungeon]');
+  elements.forEach((el) => {
+    if (visibleChecks.some(item => item.includes(el.dataset.dungeon + "_"))) {
+      if (document.getElementById("shiftChecks").value == "NO") {
+        el.style.visibility = "visible";
+      }
+      else {
+        el.style.display = "inline-block";
+      }
+    }
+    else {
+      if (document.getElementById("shiftChecks").value == "NO") {
+        el.style.visibility = "hidden";
+      }
+      else {
+        el.style.display = "none";
+      } 
+    }
+  });
+}
+
+function updateChecklistRewards() {
+  const rewardList = ["emerald", "ruby", "sapphire", "forest", "fire", "water", "shadow", "spirit", "light"];
+  
+  const validDungeons = new Set(["deku", "dodongos", "jabu", "forest", "fire", "water", "shadow", "spirit"]);
+
+  rewardList.forEach((rewardName, index) => {
+    const logicKey = "dung" + (index + 1);
+    
+    // Get the name of the dungeon assigned to this reward (e.g., "deku")
+    const dungeonName = Logic[logicKey];
+
+    // Only update if the logic has a value AND that value is a valid dungeon ID
+    if (dungeonName && validDungeons.has(dungeonName)) {
+      const element = document.getElementById("reward_" + dungeonName);
+      
+      if (element) {
+        // Construct the image variable name (e.g., "emerald_img")
+        element.src = Player[rewardName + "_img"];
+        element.style.visibility = "visible";
+      }
+    }
+  });
 }
 
 function updateSpawnInputs() {
@@ -1819,6 +1873,83 @@ function updateWothBorders() {
 	}
 }
 
+function updateUsefulAreaItems() {
+  const elements = document.querySelectorAll(".area_requirements");
+
+  elements.forEach((element) => {
+    // Get the stable ID from data attribute (fallback to parsing src if data missing)
+    const rawItemName = element.dataset.item || element.src.split("/").pop().replace(/\.\w+$/, "");
+    
+    let isOwned = false;
+
+    switch (rawItemName) {
+      case "hookshot":
+        // Handle Image Swapping
+        if (Player.longshot) {
+          // Only update DOM if necessary to prevent flickering
+          if (!element.src.includes(Player.longshot_img)) {
+             element.src = Player.longshot_img;
+          }
+          isOwned = true;
+        } else {
+          if (!element.src.includes(Player.hookshot_img)) {
+             element.src = Player.hookshot_img;
+          }
+          isOwned = Player.hookshot;
+        }
+        break;
+
+      default:
+        isOwned = Player[rawItemName];
+        break;
+    }
+
+    if (isOwned) {
+      element.style.filter = "drop-shadow(0px 0px 1px #FFFFFF)";
+    } else {
+      element.style.filter = "contrast(0%)";
+    }
+  });
+}
+
+function updateChecklistEntrances() {
+  // Define the HTML ID prefixes
+  const domIds = ["deku", "dodongos", "jabu", "forest", "fire", "water", "shadow", "spirit", "well", "ice", "gtg"];
+  
+  // Define a map for the Entrance -> Image logic
+  // Key: The value found in dungeonToEntrance_ER_dict
+  // Value: The specific filenames for the 'from' and 'to' images
+  const entranceImages = {
+    "deku":          { from: "kokiri",    to: "deku" },
+    "dodongos":      { from: "dmt",       to: "dodongos" },
+    "jabu":          { from: "fountain",  to: "jabu" },
+    "forest_temple": { from: "sfm",       to: "forest" },
+    "fire_temple":   { from: "dmc",       to: "fire" },
+    "water_temple":  { from: "hylia",     to: "water" },
+    "shadow_temple": { from: "graveyard", to: "shadow" },
+    "spirit_temple": { from: "colossus",  to: "spirit" },
+    "botw":          { from: "kakariko",  to: "well" },
+    "ice":           { from: "fountain",  to: "ice" },
+    "gtg":           { from: "fortress",  to: "gtg" }
+  };
+
+  const basePath = "./normal/areas/";
+
+  for (let i = 0; i < dungs_list.length; i++) {
+    const dungeonKey = dungs_list[i];
+    const elementPrefix = domIds[i];        // Prefix for the HTML ID (e.g., "deku")
+    const entranceType = dungeonToEntrance_ER_dict[dungeonKey];
+
+    //Update DOM if valid data exists
+    const imageData = entranceImages[entranceType];
+    
+    if (imageData) {
+      document.getElementById(`${elementPrefix}_from`).src = `${basePath}${imageData.from}.jpg`;
+      document.getElementById(`${elementPrefix}_to`).src   = `${basePath}${imageData.to}.jpg`;
+    }
+  }
+}
+
 function updateDungeonER() {
 	// if dungeon er is off, dungeons go to their intended destinations
 	if(document.getElementById("erOption").value != "DUNGEONS") {
@@ -1870,6 +2001,7 @@ function updateDungeonER() {
 	}
 	
 	update_dungeon_ER_Logic();
+  updateChecklistEntrances();
 }
 
 function getDungeonERMedStr(dest) {

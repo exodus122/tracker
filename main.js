@@ -68,6 +68,8 @@ function midUpdate() {
   updateLogicInfo(); //updates colors and counts for checks, woths and the skull, remaining, in-logic counters
   updateSpawnInputs(); //child and adult spawn input
   refreshLinSo();
+  updateUsefulAreaItems();
+  dungeonHeaderVisibility();
 	Update(); 
 }
 

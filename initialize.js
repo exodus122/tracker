@@ -162,7 +162,7 @@ var sometimesTableReduced = {
   "gp": "goron_pot",
   "15": "gerudo_archery_2",
   "ca": "dins_fairy",
-  "fo": "ice_bottom_of_fountain",
+  "fo": "bottom_of_fountain",
   "kz": "thaw_king",
   "di": "hylia_lab_dive",
   "og": "g_fairy",
@@ -353,10 +353,10 @@ var hintTable = {
 	"toss": "hyrule_ocarina",
 	"atz": "hyrule_tektite_grotto",
 	"tek": "hyrule_tektite_grotto",
-	"fop": "ice_bottom_of_fountain",
-	"fou": "ice_bottom_of_fountain",
-	"fountain": "ice_bottom_of_fountain",
-	"icy": "ice_bottom_of_fountain",
+	"fop": "bottom_of_fountain",
+	"fou": "bottom_of_fountain",
+	"fountain": "bottom_of_fountain",
+	"icy": "bottom_of_fountain",
 	"iro": "ice_irons",
 	"iron": "ice_irons",
 	"irons": "ice_irons",
@@ -911,23 +911,6 @@ Player.gtg_logically_accessible=0;
 Player.well_logically_accessible=0;
 Player.ganons_logically_accessible=0;
 	
-Player.kokiri_sword_img= "./normal/items/kokiri_sword.png";
-Player.bomb_img= "./images/explosive505050.png";
-Player.rutos_letter_img= "./images/letter505050.png";
-Player.boomerang_img= "./images/boomerang505050.png";
-Player.hookshot_img= "./images/hookshot505050.png";
-Player.bow_img= "./images/bow505050.png";
-Player.goron_bracelet_img= "./images/strength1505050.png";
-Player.hammer_img= "./images/ham505050.png";
-Player.iron_boots_img= "./images/ironboots505050.png";
-Player.silver_scale_img=  "./images/silverscale505050.png"
-Player.golden_scale_img= "./images/goldenscale505050.png";
-Player.longshot_img= "./images/longshot505050.png";
-Player.silver_gauntlets_img= "./images/strength2505050.png";
-Player.mirror_shield_img= "./images/mirrorshield505050.png";
-Player.dins_fire_img= "./images/dinsfirenew505050.png";
-Player.magic_img= "./images/magic505050.png";
-Player.hover_boots_img= "./images/hovers505050.png";
 Player.theme = "dark";
 Player.themeChange = false;
 Player.changetheme = 1;
@@ -946,7 +929,7 @@ var adult = [
   "poes",
   "g_fairy",
   "lacs",
-  "ice_glacier_hp", "ice_bottom_of_fountain",
+  "glacier_hp", "bottom_of_fountain",
   "gs_ice_spinning_scythe", "ice_map", "gs_ice_hp_room", "ice_hp", "ice_compass", "gs_ice_block_room", "ice_irons",
   "goron_link",
   "gs_dodongos_east_side", "gs_dodongos_scarecrow", "scrub_dodongos_1", "scrub_dodongos_2", "dodongos_map", "dodongos_compass", "gs_dodongos_above_stairs", "gs_dodongos_stair_vines", "dodongos_bomb_flower_platform", "scrub_dodongos_3", "scrub_dodongos_4", "dodongos_bomb_bag", "dodongos_end_of_bridge", "gs_dodongos_before_king", "dodongos_above_king", "dodongos_king_dodongo", "h_dodongos",
@@ -994,14 +977,14 @@ var Locations = [
 	"gs_hyrule_castle_tree", "dins_fairy", "gs_hyrule_castle_grotto", "h_castle_1", "h_castle_2", "h_castle_sos",
 	"gs_ogc", "g_fairy",
 	"lacs",
-	"gs_fountain_above_log", "gs_fountain_tree", "fountain_fairy", "ice_glacier_hp", "ice_bottom_of_fountain", "gs_fountain_hidden_cave", "h_fountain_fairy", "h_fountain",
+	"gs_fountain_above_log", "gs_fountain_tree", "fountain_fairy", "glacier_hp", "bottom_of_fountain", "gs_fountain_hidden_cave", "h_fountain_fairy", "h_fountain",
 	"gs_ice_spinning_scythe", "ice_map", "gs_ice_hp_room", "ice_hp", "ice_compass", "gs_ice_block_room", "ice_irons",
 	"deku_lobby", "deku_slingshot", "deku_slingshot_room_side", "deku_compass", "deku_compass_room_side", "gs_deku_compass", "gs_deku_basement_gate", "gs_deku_basement_vines", "deku_basement", "gs_deku_basement_back", "deku_queen_gohma",
 	"lost_woods_fairy_ocarina", "target", "ocarina_game", "lw_generic", "scrub_lw_1", "scrub_lw_2", "gs_lost_woods_bean_2", "lost_woods_scrub_grotto", "scrub_lw_3", "gs_lost_woods_bean_1", "skull_kid", "bridge_scrub", "gs_lost_woods_above_stage", "theater_skull", "theater_truth", "h_lw_bridge", "h_lw_generic",
 	"wolfos_grotto", "gs_sacred_forest", "scrub_sfm_1", "scrub_sfm_2", "h_saria", "h_sfm_1", "h_sfm_2",
 	"shop_goron_TL", "shop_goron_TR", "shop_goron_BR", "shop_goron_BL", "rolling_goron", "goron_dance", "goron_pot", "goron_maze_1", "goron_maze_2", "gs_goron_maze", "goron_maze_3", "gs_goron_center", "goron_link", "scrub_goron_1", "scrub_goron_2", "scrub_goron_3", "goron_medigoron", "h_goron_maze", "h_medigoron",
 	"gs_dodongos_east_side", "gs_dodongos_scarecrow", "scrub_dodongos_1", "scrub_dodongos_2", "dodongos_map", "dodongos_compass", "gs_dodongos_above_stairs", "gs_dodongos_stair_vines", "dodongos_bomb_flower_platform", "scrub_dodongos_3", "scrub_dodongos_4", "dodongos_bomb_bag", "dodongos_end_of_bridge", "gs_dodongos_before_king", "dodongos_above_king", "dodongos_king_dodongo", "h_dodongos",
-	"trail_dodongos_top", "gs_trail_bombable_wall", "trail_bombable", "trail_storms", "trail_fairy", "trade_quest", "gs_trail_hail_path", "gs_trail_above_dodongos", "gs_trail_soil","cow_trail", "h_trail_storms", "h_biggoron",
+	"trail_top", "gs_trail_bombable_wall", "trail_bombable", "trail_storms", "trail_fairy", "trade_quest", "gs_trail_hail_path", "gs_trail_above_dodongos", "gs_trail_soil","cow_trail", "h_trail_storms", "h_biggoron",
 	"crater_bean", "scrub_crater_1", "scrub_crater_2", "scrub_crater_3", "crater_hammer_fairy", "crater_nook_hp", "crater_grotto", "gs_crater_soil", "gs_crater_crate", "scrub_crater_child", "h_crater_grotto", "h_crater_wall",
 	"shop_kakariko_bazaar_TL", "shop_kakariko_bazaar_TR", "shop_kakariko_bazaar_BR", "shop_kakariko_bazaar_BL", "shop_kakariko_potion_TL", "shop_kakariko_potion_TR", "shop_kakariko_potion_BR", "shop_kakariko_potion_BL", "man_on_roof", "kakariko_grotto", "kakariko_hag", "windmill", "anju", "kakariko_cow_house", "archery_game", "redead_grotto", "anjus_chickens", "gs_kakariko_tree", "gs_kakariko_guard_house", "gs_kakariko_tower", "gs_kakariko_construction", "gs_kakariko_skulltula_house", "gs_kakariko_impas", "cow_kakariko", "tokens_10", "tokens_20", "tokens_30", "tokens_40", "tokens_50", "h_kakariko_grotto",
 	"shield_grave", "graveyard_box", "race_1", "race_2", "gravedigging_tour", "gs_graveyard_soil", "gs_graveyard_wall", "redead_grave", "composers_grave","h_nocturne",
@@ -1668,13 +1651,27 @@ for (var i = 0; i<Locations.length; i++) {
 		background = "url('./normal/areas/ice.jpg')";
 		var elem = document.createElement("br"); elem.className = "half_break"; elem.id = "fountain_break";  parent.appendChild(elem);
 		var elem = document.createElement("small"); elem.id = "title_ice"; elem.className = "area_titles hidden"; elem.innerHTML = "Ice"; parent.appendChild(elem);
-		var elem = document.createElement("br"); elem.className = "area_titles_break hidden"; parent.appendChild(elem);
+		var elem = document.createElement("img"); elem.dataset.dungeon = "ice"; elem.id = "ice_from"; elem.className = "area_entrance"; elem.src = './normal/areas/fountain.jpg'; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "ice"; elem.id = "ice_to"; elem.className = "area_entrance"; elem.src = './normal/areas/ice.jpg'; parent.appendChild(elem);
+		var elem = document.createElement("br"); elem.dataset.dungeon = "ice"; parent.appendChild(elem);   
+    var elem = document.createElement("img"); elem.dataset.dungeon = "ice"; elem.dataset.item = "can_shoot_blue_fire_arrows"; elem.src = "./normal/items/ice_arrows.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "ice"; elem.src = "./normal/items/bottle.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "ice"; elem.dataset.item = "bomb_bag"; elem.src = "./normal/items/bomb.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+		var elem = document.createElement("br"); elem.dataset.dungeon = "ice"; parent.appendChild(elem);  
 	}
 	if (i == AreaIndexes[11]) {
 		background = "url('./normal/areas/deku.jpg')";
 		parent = document.getElementById("normalColumn2");
 		var elem = document.createElement("small"); elem.id = "title_deku"; elem.className = "area_titles hidden"; elem.innerHTML = "Deku"; parent.appendChild(elem);
-		var elem = document.createElement("br"); elem.className = "area_titles_break hidden"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "deku"; elem.id = "deku_from"; elem.className = "area_entrance"; elem.src = './normal/areas/kokiri.jpg'; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "deku"; elem.id = "deku_to"; elem.className = "area_entrance"; elem.src = './normal/areas/deku.jpg'; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "deku"; elem.id = "reward_deku"; elem.className = "area_rewards"; parent.appendChild(elem);
+		var elem = document.createElement("br"); elem.dataset.dungeon = "deku"; parent.appendChild(elem);   
+    var elem = document.createElement("img"); elem.dataset.dungeon = "deku"; elem.src = "./normal/items/kokiri_sword.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "deku"; elem.dataset.item = "bomb_bag"; elem.src = "./normal/items/bomb.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "deku"; elem.dataset.item = "can_use_dins"; elem.src = "./normal/items/dins_fire.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "deku"; elem.dataset.item = "slingshot"; elem.src = "./normal/items/slingshot.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+		var elem = document.createElement("br"); elem.dataset.dungeon = "deku"; parent.appendChild(elem);  
 	}
 	if (i == AreaIndexes[12]) {
 		background = "url('./normal/areas/lost_woods.jpg')";
@@ -1698,7 +1695,16 @@ for (var i = 0; i<Locations.length; i++) {
 		background = "url('./normal/areas/dodongos.jpg')";
 		var elem = document.createElement("br"); elem.className = "half_break"; elem.id = "goron_break";  parent.appendChild(elem);
 		var elem = document.createElement("small"); elem.id = "title_dodongos"; elem.className = "area_titles hidden"; elem.innerHTML = "DC"; parent.appendChild(elem);
-		var elem = document.createElement("br"); elem.className = "area_titles_break hidden"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "dodongos"; elem.id = "dodongos_from"; elem.className = "area_entrance"; elem.src = './normal/areas/dmt.jpg'; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "dodongos"; elem.id = "dodongos_to"; elem.className = "area_entrance"; elem.src = './normal/areas/dodongos.jpg'; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "dodongos"; elem.id = "reward_dodongos"; elem.className = "area_rewards"; parent.appendChild(elem);
+		var elem = document.createElement("br"); elem.dataset.dungeon = "dodongos"; parent.appendChild(elem);   
+    var elem = document.createElement("img"); elem.dataset.dungeon = "dodongos"; elem.dataset.item = "bomb_bag"; elem.src = "./normal/items/bomb.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "dodongos"; elem.src = "./normal/items/chu.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "dodongos"; elem.src = "./normal/items/goron_bracelet.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "dodongos"; elem.src = "./normal/items/hammer.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "dodongos"; elem.src = "./normal/items/bow.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+		var elem = document.createElement("br"); elem.dataset.dungeon = "dodongos"; parent.appendChild(elem);  
 	}
 	if (i == AreaIndexes[16]) {
 		background = "url('./normal/areas/dmt.jpg')";
@@ -1762,71 +1768,139 @@ for (var i = 0; i<Locations.length; i++) {
 		background = "url('./normal/areas/jabu.jpg')";
 		var elem = document.createElement("br"); elem.className = "half_break"; elem.id = "fortress_break";  parent.appendChild(elem);
 		var elem = document.createElement("small"); elem.id = "title_jabu"; elem.className = "area_titles hidden"; elem.innerHTML = "Jabu"; parent.appendChild(elem);
-		var elem = document.createElement("br"); elem.className = "area_titles_break hidden"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "jabu"; elem.id = "jabu_from"; elem.className = "area_entrance"; elem.src = './normal/areas/fountain.jpg'; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "jabu"; elem.id = "jabu_to"; elem.className = "area_entrance"; elem.src = './normal/areas/jabu.jpg'; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "jabu"; elem.id = "reward_jabu"; elem.className = "area_rewards"; parent.appendChild(elem);
+		var elem = document.createElement("br"); elem.dataset.dungeon = "jabu"; parent.appendChild(elem);   
+    var elem = document.createElement("img"); elem.dataset.dungeon = "jabu"; elem.src = "./normal/items/boomerang.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+		var elem = document.createElement("br"); elem.dataset.dungeon = "jabu"; parent.appendChild(elem);  
 	}
 	if (i == AreaIndexes[27]) {
-		parent = document.getElementById("dung1"); background = "url('./normal/areas/forest.jpg')";
-		var elem = document.createElement("small"); elem.id = "title_forest"; elem.className = "area_titles"; elem.innerHTML = "For"; parent.appendChild(elem);
-		var elem = document.createElement("span"); elem.id = "forest"; elem.className = "superdot"; elem.onclick = junkUltra; elem.innerHTML = "8"; parent.appendChild(elem);
-		var elem = document.createElement("span"); elem.id = "forestSKs"; elem.className = "superdotSK"; elem.innerHTML = "5"; parent.appendChild(elem);
-		var elem = document.createElement("span"); elem.id = "forestBKs"; elem.className = "superdotBK"; elem.innerHTML = "1"; parent.appendChild(elem);
-		var elem = document.createElement("br"); parent.appendChild(elem);
+    parent = document.getElementById("dung1"); background = "url('./normal/areas/forest.jpg')";
+    var elem = document.createElement("img"); elem.dataset.dungeon = "forest"; elem.id = "forest_from"; elem.className = "area_entrance"; elem.src = './normal/areas/sfm.jpg'; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "forest"; elem.id = "forest_to"; elem.className = "area_entrance"; elem.src = './normal/areas/forest.jpg'; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "forest"; elem.id = "reward_forest"; elem.className = "area_rewards"; parent.appendChild(elem);
+		var elem = document.createElement("small"); elem.dataset.dungeon = "forest"; elem.id = "forest"; elem.className = "superJunk"; elem.onclick = junkUltra; parent.appendChild(elem);
+		var elem = document.createElement("small"); elem.dataset.dungeon = "forest"; elem.id = "forestSKs"; elem.className = "superSK"; parent.appendChild(elem);
+		var elem = document.createElement("small"); elem.dataset.dungeon = "forest"; elem.id = "forestBKs"; elem.className = "superBK"; parent.appendChild(elem);
+		var elem = document.createElement("br"); elem.dataset.dungeon = "forest"; parent.appendChild(elem);   
+    var elem = document.createElement("img"); elem.dataset.dungeon = "forest"; elem.src = "./normal/items/bow.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "forest"; elem.src = "./normal/items/goron_bracelet.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "forest"; elem.src = "./normal/items/hookshot.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "forest"; elem.src = "./normal/items/hover_boots.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "forest"; elem.dataset.item = "bomb_bag"; elem.src = "./normal/items/bomb.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("br"); elem.dataset.dungeon = "forest"; parent.appendChild(elem);   
 	}
 	if (i == AreaIndexes[28]) {
-		background = "url('./normal/areas/fire.jpg')";
-		var elem = document.createElement("small"); elem.id = "title_fire"; elem.className = "area_titles"; elem.innerHTML = "Fir"; parent.appendChild(elem);
-		var elem = document.createElement("span"); elem.id = "fire"; elem.className = "superdot"; elem.onclick = junkUltra; elem.innerHTML = "6"; parent.appendChild(elem);
-		var elem = document.createElement("span"); elem.id = "fireSKs"; elem.className = "superdotSK"; elem.innerHTML = "8"; parent.appendChild(elem);
-		var elem = document.createElement("span"); elem.id = "fireBKs"; elem.className = "superdotBK"; elem.innerHTML = "1"; parent.appendChild(elem);
-		var elem = document.createElement("br"); parent.appendChild(elem);
+	  background = "url('./normal/areas/fire.jpg')";
+    var elem = document.createElement("img"); elem.dataset.dungeon = "fire"; elem.id = "fire_from"; elem.className = "area_entrance"; elem.src = './normal/areas/dmc.jpg'; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "fire"; elem.id = "fire_to"; elem.className = "area_entrance"; elem.src = './normal/areas/fire.jpg'; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "fire"; elem.id = "reward_fire"; elem.className = "area_rewards"; parent.appendChild(elem);
+		var elem = document.createElement("small"); elem.dataset.dungeon = "fire"; elem.id = "fire"; elem.className = "superJunk"; elem.onclick = junkUltra; parent.appendChild(elem);
+		var elem = document.createElement("small"); elem.dataset.dungeon = "fire"; elem.id = "fireSKs"; elem.className = "superSK"; parent.appendChild(elem);
+		var elem = document.createElement("small"); elem.dataset.dungeon = "fire"; elem.id = "fireBKs"; elem.className = "superBK"; parent.appendChild(elem);
+		var elem = document.createElement("br"); elem.dataset.dungeon = "fire"; parent.appendChild(elem);   
+    var elem = document.createElement("img"); elem.dataset.dungeon = "fire"; elem.src = "./normal/items/hammer.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "fire"; elem.src = "./normal/items/can_use_explosives.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "fire"; elem.src = "./normal/items/bow.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "fire"; elem.src = "./normal/items/goron_tunic.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "fire"; elem.src = "./normal/items/bottle.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("br"); elem.dataset.dungeon = "fire"; parent.appendChild(elem);   
 	}
 	if (i == AreaIndexes[29]) {
 		background = "url('./normal/areas/spirit.jpg')";
 		parent = document.getElementById("dung2");
-		var elem = document.createElement("small"); elem.id = "title_spirit"; elem.className = "area_titles"; elem.innerHTML = "Spi"; parent.appendChild(elem);
-		var elem = document.createElement("span"); elem.id = "spirit"; elem.className = "superdot"; elem.onclick = junkUltra; elem.innerHTML = "14"; parent.appendChild(elem);
-		var elem = document.createElement("span"); elem.id = "spiritSKs"; elem.className = "superdotSK"; elem.innerHTML = "5"; parent.appendChild(elem);
-		var elem = document.createElement("span"); elem.id = "spiritBKs"; elem.className = "superdotBK"; elem.innerHTML = "1"; parent.appendChild(elem);
-		var elem = document.createElement("br"); parent.appendChild(elem);
+		var elem = document.createElement("img"); elem.dataset.dungeon = "spirit"; elem.id = "spirit_from"; elem.className = "area_entrance"; elem.src = './normal/areas/colossus.jpg'; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "spirit"; elem.id = "spirit_to"; elem.className = "area_entrance"; elem.src = './normal/areas/spirit.jpg'; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "spirit"; elem.id = "reward_spirit"; elem.className = "area_rewards"; parent.appendChild(elem);
+		var elem = document.createElement("small"); elem.dataset.dungeon = "spirit"; elem.id = "spirit"; elem.className = "superJunk"; elem.onclick = junkUltra; parent.appendChild(elem);
+		var elem = document.createElement("small"); elem.dataset.dungeon = "spirit"; elem.id = "spiritSKs"; elem.className = "superSK"; parent.appendChild(elem);
+		var elem = document.createElement("small"); elem.dataset.dungeon = "spirit"; elem.id = "spiritBKs"; elem.className = "superBK"; parent.appendChild(elem);
+		var elem = document.createElement("br"); elem.dataset.dungeon = "spirit"; parent.appendChild(elem);   
+    var elem = document.createElement("img"); elem.dataset.dungeon = "spirit"; elem.src = "./normal/items/silver_gauntlets.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "spirit"; elem.src = "./normal/items/mirror_shield.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "spirit"; elem.src = "./normal/items/hookshot.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "spirit"; elem.src = "./normal/items/can_use_explosives.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "spirit"; elem.src = "./normal/items/can_use_fire.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("br"); elem.dataset.dungeon = "spirit"; parent.appendChild(elem);   
 	}
 	if (i == AreaIndexes[30]) {
 		background = "url('./normal/areas/shadow.jpg')";
-		var elem = document.createElement("small"); elem.id = "title_shadow"; elem.className = "area_titles"; elem.innerHTML = "Sha"; parent.appendChild(elem);
-		var elem = document.createElement("span"); elem.id = "shadow"; elem.className = "superdot"; elem.onclick = junkUltra; elem.innerHTML = "8"; parent.appendChild(elem);
-		var elem = document.createElement("span"); elem.id = "shadowSKs"; elem.className = "superdotSK"; elem.innerHTML = "5"; parent.appendChild(elem);
-		var elem = document.createElement("span"); elem.id = "shadowBKs"; elem.className = "superdotBK"; elem.innerHTML = "1"; parent.appendChild(elem);
-		var elem = document.createElement("br"); parent.appendChild(elem);
+		var elem = document.createElement("img"); elem.dataset.dungeon = "shadow"; elem.id = "shadow_from"; elem.className = "area_entrance"; elem.src = './normal/areas/graveyard.jpg'; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "shadow"; elem.id = "shadow_to"; elem.className = "area_entrance"; elem.src = './normal/areas/shadow.jpg'; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "shadow"; elem.id = "reward_shadow"; elem.className = "area_rewards"; parent.appendChild(elem);
+		var elem = document.createElement("small"); elem.dataset.dungeon = "shadow"; elem.id = "shadow"; elem.className = "superJunk"; elem.onclick = junkUltra; parent.appendChild(elem);
+		var elem = document.createElement("small"); elem.dataset.dungeon = "shadow"; elem.id = "shadowSKs"; elem.className = "superSK"; parent.appendChild(elem);
+		var elem = document.createElement("small"); elem.dataset.dungeon = "shadow"; elem.id = "shadowBKs"; elem.className = "superBK"; parent.appendChild(elem);
+		var elem = document.createElement("br"); elem.dataset.dungeon = "shadow"; parent.appendChild(elem);   
+    var elem = document.createElement("img"); elem.dataset.dungeon = "shadow"; elem.src = "./normal/items/hover_boots.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "shadow"; elem.dataset.item = "can_use_dins"; elem.src = "./normal/items/dins_fire.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "shadow"; elem.src = "./normal/items/hookshot.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "shadow"; elem.src = "./normal/items/can_use_explosives.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "shadow"; elem.dataset.item = "can_see"; elem.src = "./normal/items/lens.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("br"); elem.dataset.dungeon = "shadow"; parent.appendChild(elem);   
 	}
 	if (i == AreaIndexes[31]) {
 		background = "url('./normal/areas/water.jpg')";
 		parent = document.getElementById("dung3");
-		var elem = document.createElement("small"); elem.id = "title_water"; elem.className = "area_titles"; elem.innerHTML = "Wat"; parent.appendChild(elem);
-		var elem = document.createElement("span"); elem.id = "water"; elem.className = "superdot"; elem.onclick = junkUltra; elem.innerHTML = "4"; parent.appendChild(elem);
-		var elem = document.createElement("span"); elem.id = "waterSKs"; elem.className = "superdotSK"; elem.innerHTML = "6"; parent.appendChild(elem);
-		var elem = document.createElement("span"); elem.id = "waterBKs"; elem.className = "superdotBK"; elem.innerHTML = "1"; parent.appendChild(elem);
-		var elem = document.createElement("br"); parent.appendChild(elem);
+		var elem = document.createElement("img"); elem.dataset.dungeon = "water"; elem.id = "water_from"; elem.className = "area_entrance"; elem.src = './normal/areas/hylia.jpg'; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "water"; elem.id = "water_to"; elem.className = "area_entrance"; elem.src = './normal/areas/water.jpg'; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "water"; elem.id = "reward_water"; elem.className = "area_rewards"; parent.appendChild(elem);
+		var elem = document.createElement("small"); elem.dataset.dungeon = "water"; elem.id = "water"; elem.className = "superJunk"; elem.onclick = junkUltra; parent.appendChild(elem);
+		var elem = document.createElement("small"); elem.dataset.dungeon = "water"; elem.id = "waterSKs"; elem.className = "superSK"; parent.appendChild(elem);
+		var elem = document.createElement("small"); elem.dataset.dungeon = "water"; elem.id = "waterBKs"; elem.className = "superBK"; parent.appendChild(elem);
+		var elem = document.createElement("br"); elem.dataset.dungeon = "water"; parent.appendChild(elem);   
+    var elem = document.createElement("img"); elem.dataset.dungeon = "water"; elem.src = "./normal/items/longshot.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "water"; elem.src = "./normal/items/iron_boots.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "water"; elem.src = "./normal/items/golden_scale.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "water"; elem.src = "./normal/items/bow.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "water"; elem.src = "./normal/items/hover_boots.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("br"); elem.dataset.dungeon = "water"; parent.appendChild(elem);   
 	}
 	if (i == AreaIndexes[32]) {
 		background = "url('./normal/areas/ganons.jpg')";
-		var elem = document.createElement("small"); elem.id = "title_ganons"; elem.className = "area_titles"; elem.innerHTML = "Gan"; parent.appendChild(elem);
-		var elem = document.createElement("span"); elem.id = "ganons"; elem.className = "superdot"; elem.onclick = junkUltra; elem.innerHTML = "14"; parent.appendChild(elem);
-		var elem = document.createElement("span"); elem.id = "ganonsSKs"; elem.className = "superdotSK"; elem.innerHTML = "2"; parent.appendChild(elem);
-		var elem = document.createElement("br"); parent.appendChild(elem);
+		var elem = document.createElement("img"); elem.dataset.dungeon = "ganons"; elem.id = "ganons_from"; elem.className = "area_entrance"; elem.src = './normal/areas/ogc.jpg'; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "ganons"; elem.id = "ganons_to"; elem.className = "area_entrance"; elem.src = './normal/areas/ganons.jpg'; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "ganons"; elem.id = "reward_ganons"; elem.className = "area_rewards"; parent.appendChild(elem);
+		var elem = document.createElement("small"); elem.dataset.dungeon = "ganons"; elem.id = "ganons"; elem.className = "superJunk"; elem.onclick = junkUltra; parent.appendChild(elem);
+		var elem = document.createElement("small"); elem.dataset.dungeon = "ganons"; elem.id = "ganonsSKs"; elem.className = "superSK"; parent.appendChild(elem);
+		var elem = document.createElement("br"); elem.dataset.dungeon = "ganons"; parent.appendChild(elem);   
+    var elem = document.createElement("img"); elem.dataset.dungeon = "ganons"; elem.src = "./normal/items/golden_gauntlets.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "ganons"; elem.src = "./normal/items/chu.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "ganons"; elem.src = "./normal/items/hookshot.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "ganons"; elem.dataset.item = "can_use_fire_arrows"; elem.src = "./normal/items/fire_arrows.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "ganons"; elem.src = "./normal/items/hover_boots.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("br"); elem.dataset.dungeon = "ganons"; parent.appendChild(elem);
 	}
 	if (i == AreaIndexes[33]) {
 		background = "url('./normal/areas/gtg.jpg')";
 		parent = document.getElementById("dung4");
-		var elem = document.createElement("small"); elem.id = "title_gtg"; elem.className = "area_titles"; elem.innerHTML = "GTG"; parent.appendChild(elem);
-		var elem = document.createElement("span"); elem.id = "gtg"; elem.className = "superdot"; elem.onclick = junkUltra; elem.innerHTML = "13"; parent.appendChild(elem);
-		var elem = document.createElement("span"); elem.id = "gtgSKs"; elem.className = "superdotSK"; elem.innerHTML = "9"; parent.appendChild(elem);
-		var elem = document.createElement("br"); parent.appendChild(elem);
+		var elem = document.createElement("img"); elem.dataset.dungeon = "gtg"; elem.id = "gtg_from"; elem.className = "area_entrance"; elem.src = './normal/areas/fortress.jpg'; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "gtg"; elem.id = "gtg_to"; elem.className = "area_entrance"; elem.src = './normal/areas/gtg.jpg'; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "gtg"; elem.id = "reward_gtg"; elem.className = "area_rewards"; parent.appendChild(elem);
+		var elem = document.createElement("small"); elem.dataset.dungeon = "gtg"; elem.id = "gtg"; elem.className = "superJunk"; elem.onclick = junkUltra; parent.appendChild(elem);
+		var elem = document.createElement("small"); elem.dataset.dungeon = "gtg"; elem.id = "gtgSKs"; elem.className = "superSK"; parent.appendChild(elem);
+		var elem = document.createElement("br"); elem.dataset.dungeon = "gtg"; parent.appendChild(elem);   
+    var elem = document.createElement("img"); elem.dataset.dungeon = "gtg"; elem.src = "./normal/items/bow.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "gtg"; elem.src = "./normal/items/silver_gauntlets.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "gtg"; elem.src = "./normal/items/can_use_explosives.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "gtg"; elem.src = "./normal/items/time.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "gtg"; elem.src = "./normal/items/hookshot.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("br"); elem.dataset.dungeon = "gtg"; parent.appendChild(elem);   
 	}
 	if (i == AreaIndexes[34]) {
 		background = "url('./normal/areas/well.jpg')";
-		var elem = document.createElement("small"); elem.id = "title_well"; elem.className = "area_titles"; elem.innerHTML = "Well"; parent.appendChild(elem);
-		var elem = document.createElement("span"); elem.id = "well"; elem.className = "superdot"; elem.onclick = junkUltra; elem.innerHTML = "11"; parent.appendChild(elem);
-		var elem = document.createElement("span"); elem.id = "wellSKs"; elem.className = "superdotSK"; elem.innerHTML = "3"; parent.appendChild(elem);
-		var elem = document.createElement("br"); parent.appendChild(elem);
+		var elem = document.createElement("img"); elem.dataset.dungeon = "well"; elem.id = "well_from"; elem.className = "area_entrance"; elem.src = './normal/areas/kakariko.jpg'; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "well"; elem.id = "well_to"; elem.className = "area_entrance"; elem.src = './normal/areas/well.jpg'; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "well"; elem.id = "reward_well"; elem.className = "area_rewards"; parent.appendChild(elem);
+		var elem = document.createElement("small"); elem.dataset.dungeon = "well"; elem.id = "well"; elem.className = "superJunk"; elem.onclick = junkUltra; parent.appendChild(elem);
+		var elem = document.createElement("small"); elem.dataset.dungeon = "well"; elem.id = "wellSKs"; elem.className = "superSK"; parent.appendChild(elem);
+		var elem = document.createElement("br"); elem.dataset.dungeon = "well"; parent.appendChild(elem);   
+    var elem = document.createElement("img"); elem.dataset.dungeon = "well"; elem.src = "./normal/items/lullaby.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "well"; elem.src = "./normal/items/can_use_explosives.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "well"; elem.src = "./normal/items/goron_bracelet.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("img"); elem.dataset.dungeon = "well"; elem.src = "./normal/items/boomerang.png"; elem.className = "area_requirements"; parent.appendChild(elem);
+    var elem = document.createElement("br"); elem.dataset.dungeon = "well"; parent.appendChild(elem);   
 	}
 	if (i < AreaIndexes[35]) {
 		var elem = document.createElement("input"); elem.id = Locations[i]; elem.style.backgroundImage = background; elem.className = "picture_input"; parent.appendChild(elem);
@@ -2075,8 +2149,8 @@ var LocationToSpoilerName = {
 	"dins_fairy": "HC Great Fairy Reward",
 	"g_fairy": "OGC Great Fairy Reward",
 	"fountain_fairy": "ZF Great Fairy Reward",
-	"ice_glacier_hp": "ZF Iceberg Freestanding PoH",
-	"ice_bottom_of_fountain": "ZF Bottom Freestanding PoH",
+	"glacier_hp": "ZF Iceberg Freestanding PoH",
+	"bottom_of_fountain": "ZF Bottom Freestanding PoH",
 	"ice_map": "Ice Cavern Map Chest",
 	"ice_compass": "Ice Cavern Compass Chest",
 	"ice_hp": "Ice Cavern Freestanding PoH",
@@ -2111,7 +2185,7 @@ var LocationToSpoilerName = {
 	"dodongos_above_king": "Dodongos Cavern Boss Room Chest",
 	"dodongos_king_dodongo": "Dodongos Cavern King Dodongo Heart",
 	"trail_bombable": "DMT Chest",
-	"trail_dodongos_top": "DMT Freestanding PoH",
+	"trail_top": "DMT Freestanding PoH",
 	"trail_storms": "DMT Storms Grotto Chest",
 	"trail_fairy": "DMT Great Fairy Reward",
 	"trade_quest": "DMT Biggoron",
@@ -2374,8 +2448,8 @@ var SpoilerLocationToLocationName = {
 	"HC Great Fairy Reward": "dins_fairy",
 	"OGC Great Fairy Reward": "g_fairy",
 	"ZF Great Fairy Reward": "fountain_fairy",
-	"ZF Iceberg Freestanding PoH": "ice_glacier_hp",
-	"ZF Bottom Freestanding PoH": "ice_bottom_of_fountain",
+	"ZF Iceberg Freestanding PoH": "glacier_hp",
+	"ZF Bottom Freestanding PoH": "bottom_of_fountain",
 	"Ice Cavern Map Chest": "ice_map",
 	"Ice Cavern Compass Chest": "ice_compass",
 	"Ice Cavern Freestanding PoH": "ice_hp",
@@ -2410,7 +2484,7 @@ var SpoilerLocationToLocationName = {
 	"Dodongos Cavern Boss Room Chest": "dodongos_above_king",
 	"Dodongos Cavern King Dodongo Heart": "dodongos_king_dodongo",
 	"DMT Chest": "trail_bombable",
-	"DMT Freestanding PoH": "trail_dodongos_top",
+	"DMT Freestanding PoH": "trail_top",
 	"DMT Storms Grotto Chest": "trail_storms",
 	"DMT Great Fairy Reward": "trail_fairy",
 	"DMT Biggoron": "trade_quest",
