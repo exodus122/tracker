@@ -386,6 +386,7 @@ function stoneMedallionInput() {
 	Logic.generic3 = Logic.dung9;		
   
   updateChecklistRewards();
+  dungeonHeaderVisibility();
 }
 
 function dungeonHeaderVisibility() {
