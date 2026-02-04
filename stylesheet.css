@@ -589,6 +589,9 @@ overflow: hidden;
 	width: 280px;
 	padding-right: 5px;
 }
+.oops {
+  font-size:1px;
+}
 .pplpics {
 	height:12px;
 	width: 12px;
@@ -605,9 +608,9 @@ overflow: hidden;
 }
 .dungcolumn {
 	top:-2px;
-  float: left;
-  width:86px;
+  float:left;
   position:relative;
+  width:86px;
 }
 .no_span {
 	
