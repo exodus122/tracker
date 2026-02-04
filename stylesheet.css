@@ -41,36 +41,37 @@ overflow: hidden;
   width:150px;
 }
 .area_rewards {
-  width:18px;
-  height:18px;
+  width:15px;
+  height:15px;
   visibility: hidden;
 }
 .area_entrance {
-  width:18px;
-  height:17px;
+  width:17px;
+  height:15px;
 }
 .area_requirements{
-  height:20px;
-  width:20px;
-  margin-right:-2px;
+  height:18px;
+  width:18px;
+  margin-right:-3px;
   margin-bottom:5px;
   filter: contrast(0%);
   
 }
 .superJunk {
   color:lightblue;
-  font-size:25px;
+  font-size:23px;
   letter-spacing:-5px;
+  margin-left:-1px;
 }
 .superSK {
   color:lightgrey;
-  font-size:25px;
-  margin-left:3px;
+  font-size:23px;
+  margin-left:2px;
 }
 .superBK {
   color:red;
-  font-size:25px;
-  margin-left:-3px;
+  font-size:23px;
+  margin-left:-2px;
 }
 .chuButtons{
     width: 25px;
@@ -102,7 +103,7 @@ overflow: hidden;
 	margin-left:90px;
 }
 #normalColumn1 {
-	margin-left:3px;
+	margin-left:2px;
 }
 .track_text {
 	font-size:26px;
@@ -345,9 +346,9 @@ overflow: hidden;
 	display: none;
 }
 .column {
-	margin-top:4px;
+	margin-top:2px;
   float: left;
-  width: 97px;
+  width: 86px;
 }
 #inputConfig {
 	width:200px;
@@ -424,7 +425,6 @@ overflow: hidden;
 }
 .checkSummaryColumn {
 	margin-top:10px;
-	left:15px;
 	position:relative;
 	float: left;
 	height: 200px;
@@ -436,55 +436,47 @@ overflow: hidden;
 .checked_text_summary {
 	font-size: 14px;
 	font-weight: bold;	
-	letter-spacing: 0px;
 	color: chartreuse;
 	opacity: 1;
 }
 .checked_text_summary_unknown {
 	font-size: 14px;
 	font-weight: bold;	
-	letter-spacing: 0px;
 	color: yellow;
 	opacity: 1;
 }
 .checked_text_summary_not_have {
 	font-size: 14px;
 	font-weight: bold;	
-	letter-spacing: 0px;
 	color: chartreuse;
 	opacity: .5;
 }
 .checked_text_summary_unknown_not_have {
 	font-size: 14px;
 	font-weight: bold;	
-	letter-spacing: 0px;
 	color: yellow;
 	opacity: .5;
 }
 .checked_text_summary_have_ool {
 	font-size: 14px;
 	font-weight: normal;	
-	letter-spacing: 0px;
 	color: orange;
 	opacity: 1;
 }
 .checked_text_summary_ool {
 	font-size: 14px;
 	font-weight: normal;	
-	letter-spacing: 0px;
 	opacity: 1;
 }
 .checked_text_summary_known {
 	font-size: 14px;
 	font-weight: normal;	
-	letter-spacing: 0px;
 	color: white;
 	opacity: 1;
 }
 .checked_text_summary_ool_could_have {
 	font-size: 14px;
 	font-weight: normal;	
-	letter-spacing: 0px;
 	color: orange;
 	opacity: .5;
 }
@@ -590,6 +582,7 @@ overflow: hidden;
 }
 #linsoColumn {
 	position: relative;
+  left:90px;
 	margin-top:10px;
 	margin-left:5px;
 	float: left;
@@ -611,9 +604,10 @@ overflow: hidden;
 	line-height: 131%;
 }
 .dungcolumn {
-	margin-top:4px;
+	top:-2px;
   float: left;
-  width:100px;
+  width:86px;
+  position:relative;
 }
 .no_span {
 	
@@ -672,7 +666,6 @@ overflow: hidden;
 .picture_input {
 	width: 28px;
 	height:22px;
-	margin-left:3px;
 	vertical-align: top;
 	padding: 0;
 	border: none;
@@ -733,15 +726,12 @@ overflow: hidden;
 }
 .check_text {
 	font-size: 16px;
-	letter-spacing: 0px;
 }
 .logic_check_text{
 	font-size: 16px;
 	color: chartreuse;
-	font-weight:bold;
 	display: inline-block;
 	opacity: 1;
-	letter-spacing: -1px;
 }
 .logic_check_text_not_have{
 	font-size: 16px;
@@ -752,7 +742,6 @@ overflow: hidden;
 	margin-top:2px;
 	margin-bottom:1px;
 	vertical-align: top;
-	letter-spacing: -1px;
 }
 .known_check_text{
 	font-size: 16px;
@@ -761,7 +750,6 @@ overflow: hidden;
 	display: inline-block;
 	opacity: .5;
 	vertical-align: top;
-	letter-spacing: -1px;
 }
 .logic_check_text2{
 	vertical-align: top;
@@ -778,7 +766,6 @@ overflow: hidden;
 	font-weight:normal;
 	display: inline-block;
 	opacity: .5;
-	letter-spacing: -1px;
 }
 .access_check_text_not_have{
 	vertical-align: top;
@@ -787,7 +774,6 @@ overflow: hidden;
 	font-weight:normal;
 	display: inline-block;
 	opacity: .2;
-	letter-spacing: -1px;
 }
 .ool_check_text{
 	vertical-align: top;
@@ -796,7 +782,6 @@ overflow: hidden;
 	color: 	white;
 	display: inline-block;
 	opacity: .5;
-	letter-spacing: -1px;
 }
 .ool_check_text2{
 	vertical-align: top;
@@ -815,7 +800,6 @@ overflow: hidden;
 	margin-top:2px;
 	margin-bottom:1px;
 	vertical-align: top;
-	letter-spacing: -1px;
 }
 #timerControl {
 	display:none;	

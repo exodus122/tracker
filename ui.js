@@ -1426,7 +1426,6 @@ function updateLogicInfo() {
 			}
 			else if (Location_Peek[key] == true) {
 				document.getElementById(str).className= "logic_check_text"; 
-				document.getElementById(str).style.fontWeight = "bold";
 				document.getElementById(str).style.opacity = 1;
 			}
 			else {
@@ -1513,7 +1512,6 @@ function updateLogicInfo() {
 					else {
 						document.getElementById(str).className= "logic_check_text";
 						document.getElementById(str).style.opacity = 1;
-						document.getElementById(str).style.fontWeight = "bold";
 						document.getElementById(str).style.color ="chartreuse";
 					}
 					
@@ -1581,6 +1579,7 @@ function updateLogicInfo() {
 			}
 		}
 		if (colorChange) {document.getElementById(str).style.color = "magenta";document.getElementById(str).style.opacity = "1";}
+    document.getElementById(str).style.letterSpacing = "-1.3px";
 	}
 	if (document.getElementById("pieceDungeons").value.includes("de")) {document.getElementById("text_deku_lobby").style.color = "#FFD700"; document.getElementById("text_deku_lobby").style.opacity = 1; document.getElementById("text_deku_lobby").style.fontWeight = "bold";}
 	if (document.getElementById("pieceDungeons").value.includes("do")) {document.getElementById("text_dodongos_above_king").style.color = "#FFD700"; document.getElementById("text_dodongos_above_king").style.opacity = 1; document.getElementById("text_dodongos_above_king").style.fontWeight = "bold";}
