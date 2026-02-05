@@ -656,8 +656,8 @@ function checksPutInLogicByItem(item) {
 	Location_PutIn_Logic.g_fairy = (PutIn_Logic.golden_gauntlets || Spawn.adult_ogc) && PutIn_Logic.lullaby;
 	Location_PutIn_Logic.lacs = PutIn_Logic.shadow_medallion && PutIn_Logic.spirit_medallion;
 	Location_PutIn_Logic.fountain_fairy = PutIn_Logic.ice_access && PutIn_Logic.bomb_bag;
-	Location_PutIn_Logic.glacier_hp = PutIn_Logic.ice_access;
-	Location_PutIn_Logic.bottom_of_fountain = PutIn_Logic.ice_access && PutIn_Logic.iron_boots;
+	Location_PutIn_Logic.ice_glacier_hp = PutIn_Logic.ice_access;
+	Location_PutIn_Logic.ice_bottom_of_fountain = PutIn_Logic.ice_access && PutIn_Logic.iron_boots;
 	Location_PutIn_Logic.ice_map = PutIn_Logic.ice_access;
 	Location_PutIn_Logic.ice_compass = PutIn_Logic.ice_access;
 	Location_PutIn_Logic.ice_hp = PutIn_Logic.ice_access;
@@ -693,7 +693,7 @@ function checksPutInLogicByItem(item) {
 	Location_PutIn_Logic.dodongos_above_king = PutIn_Logic.bomb_bag;
 	Location_PutIn_Logic.dodongos_king_dodongo = PutIn_Logic.bomb_bag;
 	Location_PutIn_Logic.trail_bombable = PutIn_Logic.can_blast_or_smash;
-	Location_PutIn_Logic.trail_top = true;
+	Location_PutIn_Logic.trail_dodongos_top = true;
 	Location_PutIn_Logic.trail_storms = PutIn_Logic.storms;
 	Location_PutIn_Logic.trail_fairy = (PutIn_Logic.can_blast_or_smash || Spawn.child_dmt_fairy || Spawn.adult_dmt_fairy) && PutIn_Logic.lullaby;
 	Location_PutIn_Logic.trade_quest = Location_PutIn_Logic.trade_quest = (((PutIn_Logic.ice_access || ((PutIn_Logic.giants_wallet || PutIn_Logic.can_enter_ganons) && (PutIn_Logic.lullaby || Spawn.adult_zd) && PutIn_Logic.bottle)) && PutIn_Logic.prescription) || PutIn_Logic.claim_check) && PutIn_Logic.crater_top;
