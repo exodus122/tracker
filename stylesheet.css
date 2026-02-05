@@ -51,10 +51,9 @@ overflow: hidden;
   filter:drop-shadow(0px 0px 1px #FFFFFF);
 }
 .area_requirements{
-  height:18px;
-  width:18px;
-  margin-right:-3px;
-  margin-bottom:5px;
+  height:14px;
+  width:14px;
+  margin-right:-1px;
   filter: contrast(0%);
   
 }
@@ -63,16 +62,19 @@ overflow: hidden;
   font-size:23px;
   letter-spacing:-5px;
   margin-left:-1px;
+  margin-bottom:-3px;
 }
 .superSK {
   color:lightgrey;
   font-size:23px;
   margin-left:2px;
+  margin-bottom:-3px;
 }
 .superBK {
   color:red;
   font-size:23px;
   margin-left:-2px;
+  margin-bottom:-3px;
 }
 .chuButtons{
     width: 25px;
