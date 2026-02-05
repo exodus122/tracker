@@ -62,19 +62,19 @@ overflow: hidden;
   font-size:23px;
   letter-spacing:-5px;
   margin-left:-1px;
-  margin-bottom:-3px;
+  margin-bottom:-5px;
 }
 .superSK {
   color:lightgrey;
   font-size:23px;
   margin-left:2px;
-  margin-bottom:-3px;
+  margin-bottom:-5px;
 }
 .superBK {
   color:red;
   font-size:23px;
   margin-left:-2px;
-  margin-bottom:-3px;
+  margin-bottom:-5px;
 }
 .chuButtons{
     width: 25px;
