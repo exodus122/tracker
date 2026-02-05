@@ -600,7 +600,7 @@ function linsoControl() {
 		document.getElementById("soli_woth_info").appendChild(document.getElementById("woth_info")); 
 		document.getElementById("woth_info").style.top = "560px"; document.getElementById("woth_info").style.marginLeft = "0px";
 		document.getElementById("confirmed_logically_required").style.top = "850px"; document.getElementById("confirmed_logically_required").style.left = "735px";
-    document.getElementById("checkSummaryColumn1").style.top = "112px"; document.getElementById("checkSummaryColumn1").style.left = "770px";
+    document.getElementById("checkSummaryColumn1").style.top = "112px"; document.getElementById("checkSummaryColumn1").style.left = "750px";
     
 	}
 	else {

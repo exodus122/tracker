@@ -225,22 +225,22 @@ function processInputs() {
       flash();
 			continue;
 		}
-		if (inputIdx == 1) {
-			Check[document.getElementById(locationId).id] = "small_key";
+		if (inputIdx == 1) {		
       if (!hinted) {
         document.getElementById("text_" + locationId).dispatchEvent(new Event('mousedown'));
       }
       else {
+        Check[document.getElementById(locationId).id] = "small_key";
         forcedDisplay[i] = true;
       }
 			continue;
 		}
 		if (inputIdx == 2) {
-			Check[document.getElementById(locationId).id] = "boss_key";
       if (!hinted) {
         document.getElementById("text_" + locationId).dispatchEvent(new Event('mousedown'));
       }
       else {
+        Check[document.getElementById(locationId).id] = "boss_key";
         forcedDisplay[i] = true;
       }
 			continue;
@@ -570,8 +570,10 @@ function junk() {
 			else if(locationID.includes("well_") && Player.current_well_keys < 3) {Player.current_well_keys +=1;}
 			else if(locationID.includes("ganons_") && Player.current_ganons_keys < 2) {Player.current_ganons_keys +=1;}
 			else {
-			if (event.target.style.color == "magenta") {event.target.style.color = "green";}
-			else {event.target.style.color = "magenta"; event.target.style.opacity = "1"}
+        if ((type == 2 && !event.altKey)) {
+          if (event.target.style.color == "magenta") {event.target.style.color = "green";}
+          else {event.target.style.color = "magenta"; event.target.style.opacity = "1"}
+        }
 			return;
 			}
 			Check[locationID]="small_key";
