@@ -1837,8 +1837,10 @@ function updateWothBorders() {
 			}
 			
 			for (var j = AreaIndexes[i-1]; j < AreaIndexes[i]; j++) {
-				if(!alwaysHints.includes(Locations[j]) && (Hinted[Locations[j]] == false || Hinted[Locations[j]] == undefined) && !Locations[j].startsWith("h_"))
+				if(!alwaysHints.includes(Locations[j]) && (Hinted[Locations[j]] == false || Hinted[Locations[j]] == undefined) && !Locations[j].startsWith("h_")) {
 					document.getElementById("text_" + Locations[j]).style.border = "solid 1px";
+          document.getElementById("text_" + Locations[j]).style.letterSpacing = "-1.6px";
+        }
 				else
 					document.getElementById("text_" + Locations[j]).style.border = "";
 			}

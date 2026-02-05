@@ -62,12 +62,12 @@ function midUpdate() {
 	}
   stoneMedallionInput();
   wothAndBarrenProcessing(); //do various things based on woth and barrens;
-  updateWothBorders(); // highlight woth checks if option enabled;
   alternateHintInput(); //implements inputting hints into the note box;
   setInLogicMaxForDungeons(); //ensures that dungeons will never add more to the in logic counter than the amount of items they contain
   updateLogicInfo(); //updates colors and counts for checks, woths and the skull, remaining, in-logic counters
   updateSpawnInputs(); //child and adult spawn input
   refreshLinSo();
+  updateWothBorders(); // highlight woth checks if option enabled;
   updateUsefulAreaItems();
   dungeonHeaderVisibility();
 	Update(); 
