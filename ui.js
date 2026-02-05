@@ -399,12 +399,8 @@ function dungeonHeaderVisibility() {
   const elements = document.querySelectorAll('[data-dungeon]');
   elements.forEach((el) => {
     if (visibleChecks.some(item => item.includes(el.dataset.dungeon + "_"))) {
-      if (document.getElementById("shiftChecks").value == "NO") {
-        el.style.visibility = "visible";
-      }
-      else {
-        el.style.display = "inline-block";
-      }
+      el.style.visibility = "visible";
+      el.style.display = "inline-block";
     }
     else {
       if (document.getElementById("shiftChecks").value == "NO") {
