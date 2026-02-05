@@ -40,6 +40,45 @@ overflow: hidden;
 #inputPresets {
   width:150px;
 }
+.area_rewards {
+  width:15px;
+  height:15px;
+  margin-bottom:1px;
+  margin-left:1px;
+  visibility: hidden;
+}
+.area_entrance {
+  width:17px;
+  height:15px;
+  filter:drop-shadow(0px 0px 1px #FFFFFF);
+}
+.area_requirements{
+  height:12px;
+  width:12px;
+  margin-right:-1px;
+  margin-bottom:1px;
+  filter: contrast(0%);
+  
+}
+.superJunk {
+  color:lightblue;
+  font-size:23px;
+  letter-spacing:-5px;
+  margin-left:-1px;
+  margin-bottom:-5px;
+}
+.superSK {
+  color:lightgrey;
+  font-size:23px;
+  margin-left:2px;
+  margin-bottom:-5px;
+}
+.superBK {
+  color:red;
+  font-size:23px;
+  margin-left:-2px;
+  margin-bottom:-5px;
+}
 .chuButtons{
     width: 25px;
     font-size: 18px;
@@ -70,7 +109,7 @@ overflow: hidden;
 	margin-left:90px;
 }
 #normalColumn1 {
-	margin-left:3px;
+	margin-left:2px;
 }
 .track_text {
 	font-size:26px;
@@ -296,7 +335,6 @@ overflow: hidden;
 }
 .area_titles {
 	font-size: 20px;
-	float: left;
 	font-weight: 3000;
 	text-shadow:
 		-1px -1px 0 #000,
@@ -314,9 +352,9 @@ overflow: hidden;
 	display: none;
 }
 .column {
-	margin-top:4px;
+	margin-top:2px;
   float: left;
-  width: 97px;
+  width: 89px;
 }
 #inputConfig {
 	width:200px;
@@ -393,7 +431,6 @@ overflow: hidden;
 }
 .checkSummaryColumn {
 	margin-top:10px;
-	left:15px;
 	position:relative;
 	float: left;
 	height: 200px;
@@ -405,55 +442,47 @@ overflow: hidden;
 .checked_text_summary {
 	font-size: 14px;
 	font-weight: bold;	
-	letter-spacing: 0px;
 	color: chartreuse;
 	opacity: 1;
 }
 .checked_text_summary_unknown {
 	font-size: 14px;
 	font-weight: bold;	
-	letter-spacing: 0px;
 	color: yellow;
 	opacity: 1;
 }
 .checked_text_summary_not_have {
 	font-size: 14px;
 	font-weight: bold;	
-	letter-spacing: 0px;
 	color: chartreuse;
 	opacity: .5;
 }
 .checked_text_summary_unknown_not_have {
 	font-size: 14px;
 	font-weight: bold;	
-	letter-spacing: 0px;
 	color: yellow;
 	opacity: .5;
 }
 .checked_text_summary_have_ool {
 	font-size: 14px;
 	font-weight: normal;	
-	letter-spacing: 0px;
 	color: orange;
 	opacity: 1;
 }
 .checked_text_summary_ool {
 	font-size: 14px;
 	font-weight: normal;	
-	letter-spacing: 0px;
 	opacity: 1;
 }
 .checked_text_summary_known {
 	font-size: 14px;
 	font-weight: normal;	
-	letter-spacing: 0px;
 	color: white;
 	opacity: 1;
 }
 .checked_text_summary_ool_could_have {
 	font-size: 14px;
 	font-weight: normal;	
-	letter-spacing: 0px;
 	color: orange;
 	opacity: .5;
 }
@@ -559,11 +588,15 @@ overflow: hidden;
 }
 #linsoColumn {
 	position: relative;
+  left:90px;
 	margin-top:10px;
 	margin-left:5px;
 	float: left;
 	width: 280px;
 	padding-right: 5px;
+}
+.oops {
+  font-size:1px;
 }
 .pplpics {
 	height:12px;
@@ -580,9 +613,10 @@ overflow: hidden;
 	line-height: 131%;
 }
 .dungcolumn {
-	margin-top:4px;
-  float: left;
-  width:100px;
+	top:-2px;
+  float:left;
+  position:relative;
+  width:89px;
 }
 .no_span {
 	
@@ -641,7 +675,6 @@ overflow: hidden;
 .picture_input {
 	width: 28px;
 	height:22px;
-	margin-left:3px;
 	vertical-align: top;
 	padding: 0;
 	border: none;
@@ -702,15 +735,12 @@ overflow: hidden;
 }
 .check_text {
 	font-size: 16px;
-	letter-spacing: 0px;
 }
 .logic_check_text{
 	font-size: 16px;
 	color: chartreuse;
-	font-weight:bold;
 	display: inline-block;
 	opacity: 1;
-	letter-spacing: -1px;
 }
 .logic_check_text_not_have{
 	font-size: 16px;
@@ -721,7 +751,6 @@ overflow: hidden;
 	margin-top:2px;
 	margin-bottom:1px;
 	vertical-align: top;
-	letter-spacing: -1px;
 }
 .known_check_text{
 	font-size: 16px;
@@ -730,7 +759,6 @@ overflow: hidden;
 	display: inline-block;
 	opacity: .5;
 	vertical-align: top;
-	letter-spacing: -1px;
 }
 .logic_check_text2{
 	vertical-align: top;
@@ -747,7 +775,6 @@ overflow: hidden;
 	font-weight:normal;
 	display: inline-block;
 	opacity: .5;
-	letter-spacing: -1px;
 }
 .access_check_text_not_have{
 	vertical-align: top;
@@ -756,7 +783,6 @@ overflow: hidden;
 	font-weight:normal;
 	display: inline-block;
 	opacity: .2;
-	letter-spacing: -1px;
 }
 .ool_check_text{
 	vertical-align: top;
@@ -765,7 +791,6 @@ overflow: hidden;
 	color: 	white;
 	display: inline-block;
 	opacity: .5;
-	letter-spacing: -1px;
 }
 .ool_check_text2{
 	vertical-align: top;
@@ -784,7 +809,6 @@ overflow: hidden;
 	margin-top:2px;
 	margin-bottom:1px;
 	vertical-align: top;
-	letter-spacing: -1px;
 }
 #timerControl {
 	display:none;	
@@ -831,44 +855,6 @@ overflow: hidden;
   color: white;
   text-decoration: none;
   cursor: pointer;
-}
-.superdot {
-  height: 18px;
-  width: 18px;
-  margin-left:2px;
-  margin-top: 2px;
-  margin-bottom: 10px;
-  vertical-align: center;
-  text-align: center;
-  font-size:16px;
-  color:orange;
-  background-color: blue;
-  border-radius: 50%;
-  display: inline-block;
-}
-.superdotSK {
-  height: 18px;
-  width: 18px;
-  margin-left:2px;
-  vertical-align: center;
-  text-align: center;
-  font-size:16px;
-  color:black;
-  background-color: lightgray;
-  border-radius: 50%;
-  display: inline-block;
-}
-.superdotBK {
-  height: 18px;
-  width: 18px;
-  margin-left:3px;
-  vertical-align: center;
-  text-align: center;
-  font-size:16px;
-  color:white;
-  background-color: red;
-  border-radius: 50%;
-  display: inline-block;
 }
 .songpics {
 	position:relative;

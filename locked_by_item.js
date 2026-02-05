@@ -533,8 +533,8 @@ function checksLockedByItem(item) {
 	Location_Locked_Logic2.g_fairy = (Locked_Logic2.golden_gauntlets || Spawn.adult_ogc) && Locked_Logic2.lullaby;
 	Location_Locked_Logic2.lacs = Locked_Logic2.shadow_medallion && Locked_Logic2.spirit_medallion;
 	Location_Locked_Logic2.fountain_fairy = Locked_Logic2.ice_access && Locked_Logic2.bomb_bag;
-	Location_Locked_Logic2.ice_glacier_hp = Locked_Logic2.ice_access;
-	Location_Locked_Logic2.ice_bottom_of_fountain = Locked_Logic2.ice_access && Locked_Logic2.iron_boots;
+	Location_Locked_Logic2.glacier_hp = Locked_Logic2.ice_access;
+	Location_Locked_Logic2.bottom_of_fountain = Locked_Logic2.ice_access && Locked_Logic2.iron_boots;
 	Location_Locked_Logic2.ice_map = Locked_Logic2.ice_access;
 	Location_Locked_Logic2.ice_compass = Locked_Logic2.ice_access;
 	Location_Locked_Logic2.ice_hp = Locked_Logic2.ice_access;
@@ -570,7 +570,7 @@ function checksLockedByItem(item) {
 	Location_Locked_Logic2.dodongos_above_king = Locked_Logic2.bomb_bag;
 	Location_Locked_Logic2.dodongos_king_dodongo = Locked_Logic2.bomb_bag;
 	Location_Locked_Logic2.trail_bombable = Locked_Logic2.can_blast_or_smash;
-	Location_Locked_Logic2.trail_dodongos_top = true;
+	Location_Locked_Logic2.trail_top = true;
 	Location_Locked_Logic2.trail_storms = Locked_Logic2.storms;
 	Location_Locked_Logic2.trail_fairy = (Locked_Logic2.can_blast_or_smash || Spawn.child_dmt_fairy || Spawn.adult_dmt_fairy) && Locked_Logic2.lullaby;
 	Location_Locked_Logic2.trade_quest = Location_Locked_Logic2.trade_quest = (((Locked_Logic2.ice_access || ((Locked_Logic2.giants_wallet || Locked_Logic2.can_enter_ganons) && (Locked_Logic2.lullaby || Spawn.adult_zd) && Locked_Logic2.bottle)) && Locked_Logic2.prescription) || Locked_Logic2.claim_check) && Locked_Logic2.crater_top;
