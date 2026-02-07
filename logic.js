@@ -914,10 +914,10 @@ function logicShortcuts() {
 	CouldHave.can_enter_deku_entrance = CouldHave.child_can_get_past_mido;
 }
 function locationLogic(){
-	Location_Logic.mido_1 = true;
-	Location_Logic.mido_2 = true;
-	Location_Logic.mido_3 = true;
-	Location_Logic.mido_4 = true;
+	Location_Logic.kokiri_mido_1 = true;
+	Location_Logic.kokiri_mido_2 = true;
+	Location_Logic.kokiri_mido_3 = true;
+	Location_Logic.kokiri_mido_4 = true;
 	Location_Logic.kokiri_sword = true;
 	Location_Logic.kokiri_storms = Logic.storms;
 	Location_Logic.talons_chickens = true;
@@ -1359,10 +1359,10 @@ function locationLogic(){
 	
 	for(let i = 0, Access = Location_Access, Has = Player; i < 2; i++) {
 		Access.kokiri_sword = true;
-		Access.mido_1 = true;
-		Access.mido_2 = true;
-		Access.mido_3 = true;
-		Access.mido_4 = true;
+		Access.kokiri_mido_1 = true;
+		Access.kokiri_mido_2 = true;
+		Access.kokiri_mido_3 = true;
+		Access.kokiri_mido_4 = true;
 		Access.talons_chickens = true;
 		Access.back_of_ranch = true;
 		Access.hyrule_remoteGrotto = Has.can_blast_or_smash;

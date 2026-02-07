@@ -500,10 +500,10 @@ function checksLockedByItem(item) {
 	if(Logic.sapphire == "pocket") {Locked_Logic2.zora_sapphire = true;}
 
 	
-	Location_Locked_Logic2.mido_1 = true;
-	Location_Locked_Logic2.mido_2 = true;
-	Location_Locked_Logic2.mido_3 = true;
-	Location_Locked_Logic2.mido_4 = true;
+	Location_Locked_Logic2.kokiri_mido_1 = true;
+	Location_Locked_Logic2.kokiri_mido_2 = true;
+	Location_Locked_Logic2.kokiri_mido_3 = true;
+	Location_Locked_Logic2.kokiri_mido_4 = true;
 	Location_Locked_Logic2.kokiri_sword = true;
 	Location_Locked_Logic2.kokiri_storms = Locked_Logic2.storms;
 	Location_Locked_Logic2.talons_chickens = true;

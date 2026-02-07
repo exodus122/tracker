@@ -997,9 +997,6 @@ document.onkeydown = function(e) {
 	if (e.which == 19) {
 		timerControl();
 	}
-    if (e.which == 188) {
-		timerControlToD();
-	}
 	if (e.ctrlKey && e.which == 90) {
 		e.preventDefault();
 		Undo();

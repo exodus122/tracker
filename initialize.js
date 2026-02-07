@@ -969,7 +969,7 @@ var child = [
 ];
   
 var Locations = [
-	"mido_1", "mido_2", "mido_3", "mido_4", "kokiri_sword", "shop_kokiri_TL", "shop_kokiri_TR", "shop_kokiri_BR", "shop_kokiri_BL", "gs_kokiri_child", "gs_kokiri_soil", "gs_kokiri_adult", "kokiri_storms", "cow_kokiri", "h_deku_left", "h_deku_right", "h_near_lw", "h_kokiri_storms",
+	"kokiri_mido_1", "kokiri_mido_2", "kokiri_mido_3", "kokiri_mido_4", "kokiri_sword", "shop_kokiri_TL", "shop_kokiri_TR", "shop_kokiri_BR", "shop_kokiri_BL", "gs_kokiri_child", "gs_kokiri_soil", "gs_kokiri_adult", "kokiri_storms", "cow_kokiri", "h_deku_left", "h_deku_right", "h_near_lw", "h_kokiri_storms",
 	"talons_chickens", "gs_lon_lon_tree", "back_of_ranch", "scrub_ranch_1", "scrub_ranch_2", "scrub_ranch_3", "gs_lon_lon_window", "gs_lon_lon_shed", "gs_lon_lon_back_wall","cow_ranch1", "cow_ranch2", "cow_ranch3", "cow_ranch4", 
 	"hyrule_marketGrotto", "hyrule_tektite_grotto", "hyrule_hp_scrub", "hyrule_openGrotto", "hyrule_remoteGrotto", "gs_outside_kakariko", "gs_near_gerudo", "hyrule_ocarina", "cow_field", "h_hyrule_remoteGrotto", "h_hyrule_openGrotto", "h_hyrule_marketGrotto", "h_hyrule_web",
 	"gerudovalley_box", "gerudovalley_fall", "gs_valley_small_bridge", "gs_valley_bean", "gs_valley_pillar", "gs_valley_tent", "gerudo_hammer", "scrub_gv_1", "scrub_gv_2", "cow_valley", "h_valley",
@@ -987,7 +987,7 @@ var Locations = [
 	"gs_dodongos_east_side", "gs_dodongos_scarecrow", "scrub_dodongos_1", "scrub_dodongos_2", "dodongos_map", "dodongos_compass", "gs_dodongos_above_stairs", "gs_dodongos_stair_vines", "dodongos_bomb_flower_platform", "scrub_dodongos_3", "scrub_dodongos_4", "dodongos_bomb_bag", "dodongos_end_of_bridge", "gs_dodongos_before_king", "dodongos_above_king", "dodongos_king_dodongo", "h_dodongos",
 	"trail_top", "gs_trail_bombable_wall", "trail_bombable", "trail_storms", "trail_fairy", "trade_quest", "gs_trail_hail_path", "gs_trail_above_dodongos", "gs_trail_soil","cow_trail", "h_trail_storms", "h_biggoron",
 	"crater_bean", "scrub_crater_1", "scrub_crater_2", "scrub_crater_3", "crater_hammer_fairy", "crater_nook_hp", "crater_grotto", "gs_crater_soil", "gs_crater_crate", "scrub_crater_child", "h_crater_grotto", "h_crater_wall",
-	"shop_kakariko_bazaar_TL", "shop_kakariko_bazaar_TR", "shop_kakariko_bazaar_BR", "shop_kakariko_bazaar_BL", "shop_kakariko_potion_TL", "shop_kakariko_potion_TR", "shop_kakariko_potion_BR", "shop_kakariko_potion_BL", "man_on_roof", "kakariko_grotto", "kakariko_hag", "windmill", "anju", "kakariko_cow_house", "archery_game", "redead_grotto", "anjus_chickens", "gs_kakariko_tree", "gs_kakariko_guard_house", "gs_kakariko_tower", "gs_kakariko_construction", "gs_kakariko_skulltula_house", "gs_kakariko_impas", "cow_kakariko", "tokens_10", "tokens_20", "tokens_30", "tokens_40", "tokens_50", "h_kakariko_grotto",
+	"tokens_10", "tokens_20", "tokens_30", "tokens_40", "tokens_50", "shop_kakariko_bazaar_TL", "shop_kakariko_bazaar_TR", "shop_kakariko_bazaar_BR", "shop_kakariko_bazaar_BL", "shop_kakariko_potion_TL", "shop_kakariko_potion_TR", "shop_kakariko_potion_BR", "shop_kakariko_potion_BL", "man_on_roof", "kakariko_grotto", "kakariko_hag", "windmill", "anju", "kakariko_cow_house", "archery_game", "redead_grotto", "anjus_chickens", "gs_kakariko_tree", "gs_kakariko_guard_house", "gs_kakariko_tower", "gs_kakariko_construction", "gs_kakariko_skulltula_house", "gs_kakariko_impas", "cow_kakariko", "h_kakariko_grotto",
 	"shield_grave", "graveyard_box", "race_1", "race_2", "gravedigging_tour", "gs_graveyard_soil", "gs_graveyard_wall", "redead_grave", "composers_grave","h_nocturne",
 	"gs_river_tree", "scrub_river_1", "scrub_river_2", "river_bean_salesman", "river_pillar", "frogs_1", "river_grotto", "gs_river_near_grotto", "gs_river_above_bridge", "river_ledge", "gs_river_ladder", "frogs_2", "h_river_grotto", "h_river_pillar", "h_river_domain",
 	"shop_domain_TL", "shop_domain_TR", "shop_domain_BR", "shop_domain_BL", "zora_torches", "zora_diving", "thaw_king", "gs_domain", "h_domain",
@@ -1026,7 +1026,7 @@ var Names = [
 	/*Dodongos*/"*Keese", "*Pierre", "Scrub R", "Scrub L", "Map", "Compass", "*Nook", "*Vines", "Plat", "Scrub 2F", "Scrub 2F", "B Bag", "Bridge", "*Last", "Above", "King", "Dodongos",
 	/*Trail*/"Top", "*Wall", "Wall", "SoS", "Fairy", "Trade", "*Hail", "*Flower", "*Soil", "Cow", "SoS", "Biggoron",
 	/*Crater*/"Bean", "Scrub", "Scrub", "Scrub", "Fairy", "Nook", "Grotto", "*Soil", "*Crate", "Ch. Scrub", "Grotto", "Wall",
-	/*Kakariko*/"Bazaar 1", "Bazaar 2", "Bazaar 3", "Bazaar 4", "Potion 1", "Potion 2", "Potion 3", "Potion 4", "Roof", "Rear Gr", "Hag", "Windmill", "Anj", "Cow", "Arch'ry", "Redead", "Cuccos", "*Tree", "*Guard", "*Tower", "*Archery", "*GS house", "*Impas", "Cow Milk", "Ten", "Twenty", "Thirty", "Fourty", "Fifty", "Grotto", //reasoning for skull check naming being a little weird is just because unleash animals needs enough characters to work properly(maybe not worth supporting)
+	/*Kakariko*/"Ten", "Twenty", "Thirty", "Fourty", "Fifty", "Bazaar 1", "Bazaar 2", "Bazaar 3", "Bazaar 4", "Potion 1", "Potion 2", "Potion 3", "Potion 4", "Roof", "Rear Gr", "Hag", "Windmill", "Anj", "Cow", "Arch'ry", "Redead", "Cuccos", "*Tree", "*Guard", "*Tower", "*Archery", "*GS house", "*Impas", "Cow Milk", "Grotto",
 	/*Graveyard*/"Shield", "Box", "Race", "Race", "Tour", "*Soil", "*Wall", "Redead", "Compose", "Nocturne",
 	/*River*/"*Tree", "Scrub", "Scrub", "Bean", "Pillar", "Frogs 1", "Grotto", "*Near Gr", "*Bridge", "Ledge", "*Ladder", "Frogs 2", "Grotto", "Pillar", "Water",
 	/*Domain*/"Shop 1", "Shop 2", "Shop 3", "Shop 4", "Torches", "Divin'", "King", "*Skull", "Domain",
@@ -2115,10 +2115,10 @@ for (var i = 1; i <= 15; i++) {
 }
 
 var LocationToSpoilerName = {
-	"mido_1": "KF Midos Top Left Chest",
-	"mido_2": "KF Midos Top Right Chest",
-	"mido_3": "KF Midos Bottom Left Chest",
-	"mido_4": "KF Midos Bottom Right Chest",
+	"kokiri_mido_1": "KF Midos Top Left Chest",
+	"kokiri_mido_2": "KF Midos Top Right Chest",
+	"kokiri_mido_3": "KF Midos Bottom Left Chest",
+	"kokiri_mido_4": "KF Midos Bottom Right Chest",
 	"kokiri_sword": "KF Kokiri Sword Chest",
 	"kokiri_storms": "KF Storms Grotto Chest",
 	"talons_chickens": "LLR Talons Chickens",
@@ -2414,10 +2414,10 @@ var LocationToSpoilerName = {
 };
 
 var SpoilerLocationToLocationName = {
-	"KF Midos Top Left Chest": "mido_1",
-	"KF Midos Top Right Chest": "mido_2",
-	"KF Midos Bottom Left Chest": "mido_3",
-	"KF Midos Bottom Right Chest": "mido_4",
+	"KF Midos Top Left Chest": "kokiri_mido_1",
+	"KF Midos Top Right Chest": "kokiri_mido_2",
+	"KF Midos Bottom Left Chest": "kokiri_mido_3",
+	"KF Midos Bottom Right Chest": "kokiri_mido_4",
 	"KF Kokiri Sword Chest": "kokiri_sword",
 	"KF Storms Grotto Chest": "kokiri_storms",
 	"LLR Talons Chickens": "talons_chickens",

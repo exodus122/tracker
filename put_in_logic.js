@@ -623,10 +623,10 @@ function checksPutInLogicByItem(item) {
 	if(Logic.sapphire == "shadow") {PutIn_Logic.zora_sapphire = Location_PutIn_Logic.shadow_bongo;}
 	if(Logic.sapphire == "pocket") {PutIn_Logic.zora_sapphire = true;}
 	
-	Location_PutIn_Logic.mido_1 = true;
-	Location_PutIn_Logic.mido_2 = true;
-	Location_PutIn_Logic.mido_3 = true;
-	Location_PutIn_Logic.mido_4 = true;
+	Location_PutIn_Logic.kokiri_mido_1 = true;
+	Location_PutIn_Logic.kokiri_mido_2 = true;
+	Location_PutIn_Logic.kokiri_mido_3 = true;
+	Location_PutIn_Logic.kokiri_mido_4 = true;
 	Location_PutIn_Logic.kokiri_sword = true;
 	Location_PutIn_Logic.kokiri_storms = PutIn_Logic.storms;
 	Location_PutIn_Logic.talons_chickens = true;
