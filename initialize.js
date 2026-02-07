@@ -1782,7 +1782,7 @@ for (var i = 0; i<Locations.length; i++) {
     var elem = document.createElement("img"); elem.dataset.dungeon = "forest"; elem.id = "forest_to"; elem.className = "area_entrance"; elem.src = './normal/areas/forest.jpg'; parent.appendChild(elem);
     var elem = document.createElement("img"); elem.dataset.dungeon = "forest"; elem.id = "reward_forest"; elem.className = "area_rewards"; parent.appendChild(elem);
 		var elem = document.createElement("small"); elem.dataset.dungeon = "forest"; elem.id = "forest"; elem.className = "superJunk"; elem.onclick = junkUltra; parent.appendChild(elem);
-		var elem = document.createElement("small"); elem.dataset.dungeon = "forest"; elem.id = "forestSKs"; elem.className = "superSK"; parent.appendChild(elem);
+		var elem = document.createElement("small"); elem.dataset.dungeon = "forest"; elem.id = "forestSKs"; elem.className = "superSK"; elem.onclick = junkUltra; parent.appendChild(elem);
 		var elem = document.createElement("small"); elem.dataset.dungeon = "forest"; elem.id = "forestBKs"; elem.className = "superBK"; parent.appendChild(elem);
 		var elem = document.createElement("br"); elem.dataset.dungeon = "forest"; parent.appendChild(elem);   
     var elem = document.createElement("img"); elem.dataset.dungeon = "forest"; elem.src = "./normal/items/bow.png"; elem.className = "area_requirements"; parent.appendChild(elem);
@@ -1798,7 +1798,7 @@ for (var i = 0; i<Locations.length; i++) {
     var elem = document.createElement("img"); elem.dataset.dungeon = "fire"; elem.id = "fire_to"; elem.className = "area_entrance"; elem.src = './normal/areas/fire.jpg'; parent.appendChild(elem);
     var elem = document.createElement("img"); elem.dataset.dungeon = "fire"; elem.id = "reward_fire"; elem.className = "area_rewards"; parent.appendChild(elem);
 		var elem = document.createElement("small"); elem.dataset.dungeon = "fire"; elem.id = "fire"; elem.className = "superJunk"; elem.onclick = junkUltra; parent.appendChild(elem);
-		var elem = document.createElement("small"); elem.dataset.dungeon = "fire"; elem.id = "fireSKs"; elem.className = "superSK"; parent.appendChild(elem);
+		var elem = document.createElement("small"); elem.dataset.dungeon = "fire"; elem.id = "fireSKs"; elem.className = "superSK"; elem.onclick = junkUltra; parent.appendChild(elem);
 		var elem = document.createElement("small"); elem.dataset.dungeon = "fire"; elem.id = "fireBKs"; elem.className = "superBK"; parent.appendChild(elem);
 		var elem = document.createElement("br"); elem.dataset.dungeon = "fire"; parent.appendChild(elem);   
     var elem = document.createElement("img"); elem.dataset.dungeon = "fire"; elem.src = "./normal/items/hammer.png"; elem.className = "area_requirements"; parent.appendChild(elem);
@@ -1815,7 +1815,7 @@ for (var i = 0; i<Locations.length; i++) {
     var elem = document.createElement("img"); elem.dataset.dungeon = "spirit"; elem.id = "spirit_to"; elem.className = "area_entrance"; elem.src = './normal/areas/spirit.jpg'; parent.appendChild(elem);
     var elem = document.createElement("img"); elem.dataset.dungeon = "spirit"; elem.id = "reward_spirit"; elem.className = "area_rewards"; parent.appendChild(elem);
 		var elem = document.createElement("small"); elem.dataset.dungeon = "spirit"; elem.id = "spirit"; elem.className = "superJunk"; elem.onclick = junkUltra; parent.appendChild(elem);
-		var elem = document.createElement("small"); elem.dataset.dungeon = "spirit"; elem.id = "spiritSKs"; elem.className = "superSK"; parent.appendChild(elem);
+		var elem = document.createElement("small"); elem.dataset.dungeon = "spirit"; elem.id = "spiritSKs"; elem.className = "superSK"; elem.onclick = junkUltra; parent.appendChild(elem);
 		var elem = document.createElement("small"); elem.dataset.dungeon = "spirit"; elem.id = "spiritBKs"; elem.className = "superBK"; parent.appendChild(elem);
 		var elem = document.createElement("br"); elem.dataset.dungeon = "spirit"; parent.appendChild(elem);   
     var elem = document.createElement("img"); elem.dataset.dungeon = "spirit"; elem.src = "./normal/items/silver_gauntlets.png"; elem.className = "area_requirements"; parent.appendChild(elem);
@@ -1831,7 +1831,7 @@ for (var i = 0; i<Locations.length; i++) {
     var elem = document.createElement("img"); elem.dataset.dungeon = "shadow"; elem.id = "shadow_to"; elem.className = "area_entrance"; elem.src = './normal/areas/shadow.jpg'; parent.appendChild(elem);
     var elem = document.createElement("img"); elem.dataset.dungeon = "shadow"; elem.id = "reward_shadow"; elem.className = "area_rewards"; parent.appendChild(elem);
 		var elem = document.createElement("small"); elem.dataset.dungeon = "shadow"; elem.id = "shadow"; elem.className = "superJunk"; elem.onclick = junkUltra; parent.appendChild(elem);
-		var elem = document.createElement("small"); elem.dataset.dungeon = "shadow"; elem.id = "shadowSKs"; elem.className = "superSK"; parent.appendChild(elem);
+		var elem = document.createElement("small"); elem.dataset.dungeon = "shadow"; elem.id = "shadowSKs"; elem.className = "superSK"; elem.onclick = junkUltra; parent.appendChild(elem);
 		var elem = document.createElement("small"); elem.dataset.dungeon = "shadow"; elem.id = "shadowBKs"; elem.className = "superBK"; parent.appendChild(elem);
 		var elem = document.createElement("br"); elem.dataset.dungeon = "shadow"; parent.appendChild(elem);   
     var elem = document.createElement("img"); elem.dataset.dungeon = "shadow"; elem.src = "./normal/items/hover_boots.png"; elem.className = "area_requirements"; parent.appendChild(elem);
@@ -1848,7 +1848,7 @@ for (var i = 0; i<Locations.length; i++) {
     var elem = document.createElement("img"); elem.dataset.dungeon = "water"; elem.id = "water_to"; elem.className = "area_entrance"; elem.src = './normal/areas/water.jpg'; parent.appendChild(elem);
     var elem = document.createElement("img"); elem.dataset.dungeon = "water"; elem.id = "reward_water"; elem.className = "area_rewards"; parent.appendChild(elem);
 		var elem = document.createElement("small"); elem.dataset.dungeon = "water"; elem.id = "water"; elem.className = "superJunk"; elem.onclick = junkUltra; parent.appendChild(elem);
-		var elem = document.createElement("small"); elem.dataset.dungeon = "water"; elem.id = "waterSKs"; elem.className = "superSK"; parent.appendChild(elem);
+		var elem = document.createElement("small"); elem.dataset.dungeon = "water"; elem.id = "waterSKs"; elem.className = "superSK"; elem.onclick = junkUltra; parent.appendChild(elem);
 		var elem = document.createElement("small"); elem.dataset.dungeon = "water"; elem.id = "waterBKs"; elem.className = "superBK"; parent.appendChild(elem);
 		var elem = document.createElement("br"); elem.dataset.dungeon = "water"; parent.appendChild(elem);   
     var elem = document.createElement("img"); elem.dataset.dungeon = "water"; elem.src = "./normal/items/longshot.png"; elem.className = "area_requirements"; parent.appendChild(elem);
@@ -1863,7 +1863,7 @@ for (var i = 0; i<Locations.length; i++) {
 		var elem = document.createElement("img"); elem.dataset.dungeon = "ganons"; elem.id = "ganons_from"; elem.className = "area_entrance"; elem.src = './normal/areas/ogc.jpg'; parent.appendChild(elem);
     var elem = document.createElement("img"); elem.dataset.dungeon = "ganons"; elem.id = "ganons_to"; elem.className = "area_entrance"; elem.src = './normal/areas/ganons.jpg'; parent.appendChild(elem);
 		var elem = document.createElement("small"); elem.dataset.dungeon = "ganons"; elem.id = "ganons"; elem.className = "superJunk"; elem.onclick = junkUltra; parent.appendChild(elem);
-		var elem = document.createElement("small"); elem.dataset.dungeon = "ganons"; elem.id = "ganonsSKs"; elem.className = "superSK"; parent.appendChild(elem);
+		var elem = document.createElement("small"); elem.dataset.dungeon = "ganons"; elem.id = "ganonsSKs"; elem.className = "superSK"; elem.onclick = junkUltra; parent.appendChild(elem);
 		var elem = document.createElement("br"); elem.dataset.dungeon = "ganons"; parent.appendChild(elem);   
     var elem = document.createElement("img"); elem.dataset.dungeon = "ganons"; elem.src = "./normal/items/golden_gauntlets.png"; elem.className = "area_requirements"; parent.appendChild(elem);
     var elem = document.createElement("img"); elem.dataset.dungeon = "ganons"; elem.src = "./normal/items/chu.png"; elem.className = "area_requirements"; parent.appendChild(elem);
@@ -1878,7 +1878,7 @@ for (var i = 0; i<Locations.length; i++) {
 		var elem = document.createElement("img"); elem.dataset.dungeon = "gtg"; elem.id = "gtg_from"; elem.className = "area_entrance"; elem.src = './normal/areas/fortress.jpg'; parent.appendChild(elem);
     var elem = document.createElement("img"); elem.dataset.dungeon = "gtg"; elem.id = "gtg_to"; elem.className = "area_entrance"; elem.src = './normal/areas/gtg.jpg'; parent.appendChild(elem);
 		var elem = document.createElement("small"); elem.dataset.dungeon = "gtg"; elem.id = "gtg"; elem.className = "superJunk"; elem.onclick = junkUltra; parent.appendChild(elem);
-		var elem = document.createElement("small"); elem.dataset.dungeon = "gtg"; elem.id = "gtgSKs"; elem.className = "superSK"; parent.appendChild(elem);
+		var elem = document.createElement("small"); elem.dataset.dungeon = "gtg"; elem.id = "gtgSKs"; elem.className = "superSK"; elem.onclick = junkUltra; parent.appendChild(elem);
 		var elem = document.createElement("br"); elem.dataset.dungeon = "gtg"; parent.appendChild(elem);   
     var elem = document.createElement("img"); elem.dataset.dungeon = "gtg"; elem.src = "./normal/items/bow.png"; elem.className = "area_requirements"; parent.appendChild(elem);
     var elem = document.createElement("img"); elem.dataset.dungeon = "gtg"; elem.src = "./normal/items/silver_gauntlets.png"; elem.className = "area_requirements"; parent.appendChild(elem);
@@ -1892,7 +1892,7 @@ for (var i = 0; i<Locations.length; i++) {
 		var elem = document.createElement("img"); elem.dataset.dungeon = "well"; elem.id = "well_from"; elem.className = "area_entrance"; elem.src = './normal/areas/kakariko.jpg'; parent.appendChild(elem);
     var elem = document.createElement("img"); elem.dataset.dungeon = "well"; elem.id = "well_to"; elem.className = "area_entrance"; elem.src = './normal/areas/well.jpg'; parent.appendChild(elem);
 		var elem = document.createElement("small"); elem.dataset.dungeon = "well"; elem.id = "well"; elem.className = "superJunk"; elem.onclick = junkUltra; parent.appendChild(elem);
-		var elem = document.createElement("small"); elem.dataset.dungeon = "well"; elem.id = "wellSKs"; elem.className = "superSK"; parent.appendChild(elem);
+		var elem = document.createElement("small"); elem.dataset.dungeon = "well"; elem.id = "wellSKs"; elem.className = "superSK"; elem.onclick = junkUltra; parent.appendChild(elem);
 		var elem = document.createElement("br"); elem.dataset.dungeon = "well"; parent.appendChild(elem);   
     var elem = document.createElement("img"); elem.dataset.dungeon = "well"; elem.src = "./normal/items/lullaby.png"; elem.className = "area_requirements"; parent.appendChild(elem);
     var elem = document.createElement("img"); elem.dataset.dungeon = "well"; elem.src = "./normal/items/can_use_explosives.png"; elem.className = "area_requirements"; parent.appendChild(elem);
