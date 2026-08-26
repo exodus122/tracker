@@ -813,7 +813,7 @@ function logicShortcuts() {
 	Player.can_use_dins = Player.dins_fire && Player.magic;
 	Player.can_shoot_blue_fire_arrows = Player.ice_arrows && Player.bow && Player.magic && document.getElementById("blueFireArrows").value == "ON";
 	Player.can_use_farores = Player.farores_wind && Player.magic;
-	Player.can_use_bottle = (Player.bottle1 || Player.bottle2 || Player.bottle3 || Player.bottle4 || (Player.rutos_letter && Player.child_can_enter_river));
+	Player.can_use_bottle = (Player.bottle1 || Player.bottle2 || Player.bottle3 || Player.bottle4/* || (Player.rutos_letter && Player.child_can_enter_river)*/);
 	Player.can_see = Player.lens && Player.magic;
 	Player.can_use_explosives = Player.bomb_bag || Player.has_chus;
   Player.can_blast_or_smash = Player.bomb_bag || Player.hammer || Player.has_chus;
@@ -1384,7 +1384,7 @@ function locationLogic(){
 		Access.market_bowling_1 = Has.bomb_bag;
 		Access.market_bowling_2 = Has.bomb_bag;
 		Access.market_lens_game = Has.can_see;
-		Access.poes= (Has.bow && (Has.can_use_bottle || Has.jabu_entrance_access)) || Has.big_poe;
+		Access.poes= (Has.bow && Has.can_use_bottle) || Has.big_poe;
 		Access.dins_fairy = (Has.bomb_bag || Player.has_chus || Spawn.child_hyrule_fairy) && Has.lullaby;
 		Access.g_fairy = (Has.golden_gauntlets || Spawn.adult_ogc) && Has.lullaby;
 		Access.lacs = (Has.gen1 || Has.shadow_medallion || Access.shadow_medallion_location) && (Has.gen2 || Has.spirit_medallion || Access.spirit_medallion_location);

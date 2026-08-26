@@ -251,19 +251,34 @@ function processInputs() {
 			if (!Known[Items2[inputIdx] + duplicate]) {
         Check[document.getElementById(locationId).id] = Items2[inputIdx] + duplicate; 
         Location[Items2[inputIdx] + duplicate] = document.getElementById(locationId).id;
-        if (Items2[inputIdx] == "prescription" || Items2[inputIdx] == "claim_check") {document.getElementById("trade_location").innerHTML = ItemNames2[inputIdx] + " &#8594; " + AreaNames[AreaNamesIndex] + ": " + Names[i];} else if (Items2[inputIdx] == "big_poe") {document.getElementById("bottle"+duplicate+"_location").innerHTML = ItemNames2[inputIdx] + " &#8594; " + AreaNames[AreaNamesIndex] + ": " + Names[i];} else if (inputIdx < Items2.indexOf("lullaby") && inputIdx != 4) {document.getElementById(Items2[inputIdx] + duplicate + "_location").innerHTML = ItemNames2[inputIdx] + " &#8594; " + AreaNames[AreaNamesIndex] + ": " + Names[i];}
+        if (Items2[inputIdx] == "prescription" || Items2[inputIdx] == "claim_check") {
+			document.getElementById("trade_location").innerHTML = ItemNames2[inputIdx] + " &#8594; " + AreaNames[AreaNamesIndex] + ": " + Names[i];
+		} 
+		else if (Items2[inputIdx] == "big_poe") {
+			document.getElementById("bottle"+duplicate+"_location").innerHTML = ItemNames2[inputIdx] + " &#8594; " + AreaNames[AreaNamesIndex] + ": " + Names[i];
+		} 
+		else if (inputIdx < Items2.indexOf("lullaby") && inputIdx != 4) {
+			document.getElementById(Items2[inputIdx] + duplicate + "_location").innerHTML = ItemNames2[inputIdx] + " &#8594; " + AreaNames[AreaNamesIndex] + ": " + Names[i];
+		}
         Known[Items2[inputIdx] + duplicate] = true; 
         if (inputs[inputIdx] == "big") {Known.big_poe = true; Location.big_poe = document.getElementById(locationId).id;}
         if (!hinted && !peeked){
-          Player[Items2[inputIdx] + duplicate] = true;
           if(inputs[inputIdx] == "big")
             Player["big_poe"] = true;
+		  else
+            Player[Items2[inputIdx] + duplicate] = true;
         }
         if (hinted) {Hinted[locationId] = true;} 
         if(hintedInput == inputs[inputIdx])
           thisIsHinted = true;
         junkItem(document.getElementById(locationId));
-        if (!Player[Items2[inputIdx] + duplicate] && i <= lastItem) {forcedDisplay[i] = true; document.getElementById(locationId).style.backgroundImage= ""; document.getElementById(locationId).value = document.getElementById(locationId).value.toUpperCase()}
+        if (!Player[Items2[inputIdx] + duplicate] && i <= lastItem) {
+			if ((inputs[inputIdx] == "big" && (peeked || hinted)) || inputs[inputIdx] != "big") {
+				forcedDisplay[i] = true; 
+				document.getElementById(locationId).style.backgroundImage= ""; 
+				document.getElementById(locationId).value = document.getElementById(locationId).value.toUpperCase()	
+			}
+		}
         thisIsHinted = false;
         hintedInput = "";
         if (inputIdx<Items2.indexOf("lullaby") && i > lastItem) {
@@ -274,6 +289,7 @@ function processInputs() {
       }
 		}
 	}
+	midUpdate();
 }
 
 function hideCheck(locationID) {
@@ -587,9 +603,25 @@ function junk() {
 			Check[locationID]="junk";
 		}
 		
-    hideCheck(locationID);
+		hideCheck(locationID);
 		
-		if (forcedDisplay[locationIndex]) {forcedDisplay[locationIndex] = false; Player[Check[locationID]] = true; if(Check[locationID] == "bombchus"){if(Player.has_chus == false){enableChus();} Check[locationID] = "junk";} Update(); }
+		if (forcedDisplay[locationIndex]) {
+			forcedDisplay[locationIndex] = false; 
+			if(document.getElementById(locationID).value == "BIG"){
+				Player["big_poe"] = true; 
+			}
+			else { 
+				Player[Check[locationID]] = true; 
+			}
+			
+			if(Check[locationID] == "bombchus"){
+				if(Player.has_chus == false){
+					enableChus();
+				} 
+				Check[locationID] = "junk";
+			}
+			Update(); 
+		}
 
 		if (Check[locationID] != "junk") {midUpdate();}
 		lastCheck.push(locationID);
@@ -1025,7 +1057,7 @@ function itemHighlights() {
 	if (Player.nocturne) {document.getElementById("nocturneimg").style.opacity =1;} else {document.getElementById("nocturneimg").style.opacity =dimmed;}
 	if (Player.prelude) {document.getElementById("preludeimg").style.opacity =1;} else {document.getElementById("preludeimg").style.opacity =dimmed;}
 	
-	if (Player.bottle || Logic.bottle) {document.getElementById("bottleimg").style.opacity =1;} else {document.getElementById("bottleimg").style.opacity =dimmed;}
+	if (Player.bottle) {document.getElementById("bottleimg").style.opacity =1;} else {document.getElementById("bottleimg").style.opacity =dimmed;}
 	if (Player.farores_wind) {document.getElementById("faroresimg").style.opacity =1;} else {document.getElementById("faroresimg").style.opacity =dimmed;}
 	if (Player.fire_arrows) {document.getElementById("firearrowsimg").style.opacity =1;} else {document.getElementById("firearrowsimg").style.opacity =dimmed;}
 	if (Player.silver_scale) {document.getElementById("silverscaleimg").style.opacity =1;} else {document.getElementById("silverscaleimg").style.opacity =dimmed;}
@@ -1696,20 +1728,22 @@ function updateSummaryText() {
 			}
 		}
 		else {
-			if (Player[theItem] || (theItem == "trade" && (Known.prescription || Known.claim_check))) 
+			if (Player[theItem] || (theItem == "trade" && (Known.prescription || Known.claim_check)) || (document.getElementById(str).innerHTML.includes("Big Poe") && Player.big_poe)) {
 				if(ManualOutOfLogicItems[theItem])
 					document.getElementById(str).className = "checked_text_summary_have_ool";
 				else if(ManualInLogicItems[theItem])
 					document.getElementById(str).className = "checked_text_summary";
 				else
 					document.getElementById(str).className = "checked_text_summary_unknown";
-			else if(CouldHave[theItem])
+			}
+			else if(CouldHave[theItem]) {
 				if(ManualOutOfLogicItems[theItem])
 					document.getElementById(str).className = "checked_text_summary_ool_could_have";
 				else if(ManualInLogicItems[theItem])
 					document.getElementById(str).className = "checked_text_summary_not_have";
 				else
 					document.getElementById(str).className = "checked_text_summary_unknown_not_have";
+			}
 			else if(Known[theItem]) 
 				document.getElementById(str).className = "checked_text_summary_known";
 			else
