@@ -800,7 +800,7 @@ function logicShortcuts() {
 	Player.child_can_enter_domain = Player.silver_scale || Spawn.child_zd || Spawn.child_zr || Player.bomb_bag || Player.has_chus;
 	Player.bean_access = ((Player.child_can_enter_river && document.getElementById("shuffleBeanPack").value == "OFF") || (Player.magic_bean_pack && document.getElementById("shuffleBeanPack").value == "ON") || (document.getElementById("preplantedBeans").value == "ON"));
 	Player.jabu_entrance_access = (Player.child_can_enter_domain && (Player.rutos_letter || document.getElementById("closedFountain").value == "OPEN")) || Spawn.child_zf;
-	Player.can_hit_jabu_switch = Player.jabu_access && Player.bomb_bag || Player.has_chus || ((Player.boomerang || Player.slingshot) && Player.jabu_child_access) || ((Player.hookshot || Player.bow) && Player.jabu_adult_access);
+	Player.can_hit_jabu_switch = Player.jabu_access && (Player.bomb_bag || Player.has_chus || ((Player.boomerang || Player.slingshot) && Player.jabu_child_access) || ((Player.hookshot || Player.bow) && Player.jabu_adult_access));
 	
 	Player.fortress_access = Player.eponas || Player.longshot || Player.requiem || Spawn.adult_gf || Spawn.adult_wasteland || Player.hookshot;
 	Player.can_save_carpenters = Spawn.child_gv_gf || (Player.fortress_access && ((Player.bow || Player.hookshot || Player.hover_boots) || true)) /*fast carpenter fix**/;
@@ -860,7 +860,7 @@ function logicShortcuts() {
 	CouldHave.bean_access = ((CouldHave.child_can_enter_river && document.getElementById("shuffleBeanPack").value == "OFF") || (CouldHave.magic_bean_pack && document.getElementById("shuffleBeanPack").value == "ON") || (document.getElementById("preplantedBeans").value == "ON"));
 	CouldHave.child_can_enter_domain = CouldHave.silver_scale || Spawn.child_zd || Spawn.child_zr || CouldHave.bomb_bag || Player.has_chus;
 	CouldHave.jabu_entrance_access = (CouldHave.child_can_enter_domain && (CouldHave.rutos_letter || document.getElementById("closedFountain").value == "OPEN")) || Spawn.child_zf;
-	CouldHave.can_hit_jabu_switch = CouldHave.jabu_access && CouldHave.bomb_bag || Player.has_chus || ((CouldHave.boomerang || CouldHave.slingshot) && CouldHave.jabu_child_access) || ((CouldHave.hookshot || CouldHave.bow) && CouldHave.jabu_adult_access);
+	CouldHave.can_hit_jabu_switch = CouldHave.jabu_access && (CouldHave.bomb_bag || Player.has_chus || ((CouldHave.boomerang || CouldHave.slingshot) && CouldHave.jabu_child_access) || ((CouldHave.hookshot || CouldHave.bow) && CouldHave.jabu_adult_access));
 	
 	CouldHave.fortress_access = CouldHave.eponas || CouldHave.longshot || CouldHave.requiem || Spawn.adult_gf || Spawn.adult_wasteland || CouldHave.hookshot;
 	CouldHave.can_save_carpenters = Spawn.child_gv_gf || (CouldHave.fortress_access && ((CouldHave.bow || CouldHave.hookshot || CouldHave.hover_boots) || true)) /*fast carpenter fix**/;
